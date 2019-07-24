@@ -36,4 +36,25 @@ class TopicsRepositoryImpl: TopicsRepository {
             completion(result)
         }
     }
+    
+    func getTopicsByCategoryId(id: Int, completion: @escaping (Result<TopicsByCategoryResponse, Error>) -> ()) {
+        let request = TopicsByCategoryRequest(id: id)
+        session.send(request: request){result in
+            completion(result)
+        }
+    }
+    
+    func createPostToTopicId(id: Int, raw: String, completion: @escaping (Result<AddNewTopicResponse, Error>) -> ()) {
+        let request = CreatePostsToTopicRequest(topicId: id, raw: raw)
+        session.send(request: request){result in
+            completion(result)
+        }
+    }
+    
+    func updateSingleTopic(id: Int, slug: String, title:String, completion: @escaping (Result<SingleTopicUpdateResponse, Error>) -> ()) {
+        let request = SingleTopicUpdateRequest(topicId: id, slug: slug, title: title)
+        session.send(request: request){result in
+            completion(result)
+        }
+    }
 }

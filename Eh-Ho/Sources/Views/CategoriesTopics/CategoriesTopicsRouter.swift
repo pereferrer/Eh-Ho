@@ -26,4 +26,9 @@ class CategoriesTopicsRouter{
         
         return viewController
     }
+    
+    func navigateToCategory(id: Int) {
+        let viewControllerToPush = TopicsByCategoryRouter.configureModule(id: id)
+        viewController?.navigationController?.pushViewController(viewControllerToPush, animated: true)
+    }
 }

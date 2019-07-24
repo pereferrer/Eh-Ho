@@ -29,6 +29,7 @@ final class SessionAPI {
                     }
                 }
             } catch let error {
+                print(error)
                 DispatchQueue.main.async {
                     completion(.failure(error))
                 }

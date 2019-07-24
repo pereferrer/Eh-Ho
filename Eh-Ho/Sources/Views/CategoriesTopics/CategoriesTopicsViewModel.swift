@@ -24,6 +24,10 @@ class CategoriesTopicsViewModel {
         fetchCategories()
     }
     
+    func didTapInCategory(id: Int) {
+        router.navigateToCategory(id: id)
+    }
+    
     private func fetchCategories() {
         
         topicsRepository.getCategories{[weak self] result in

@@ -39,7 +39,7 @@ struct Topic: Codable {
     let highestPostNumber: Int
     let imageURL: String?
     let createdAt: String
-    let lastPostedAt: String
+    let lastPostedAt: String?
     let bumped: Bool
     let bumpedAt: String
     let unseen: Bool
@@ -102,7 +102,7 @@ struct Topic: Codable {
 }
 // MARK: - Poster
 struct Poster: Codable {
-    let extras: String
+    let extras: String?
     let posterDescription: String
     let userID: Int
     

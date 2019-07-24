@@ -50,7 +50,10 @@ class CategoriesTopicsViewController: UIViewController {
 }
 
 extension CategoriesTopicsViewController: UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let categoryId = categories[indexPath.row].id
+        viewModel.didTapInCategory(id: categoryId)
+    }
 }
 
 

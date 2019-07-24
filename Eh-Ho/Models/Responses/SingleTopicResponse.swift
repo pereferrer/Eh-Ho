@@ -18,7 +18,7 @@ struct SingleTopicResponse: Codable {
     
     let timelineLookup: [[Int]]
     
-    let suggestedTopics: [SuggestedTopic]
+    let suggestedTopics: [SuggestedTopic]?
     
     let id: Int
     
@@ -62,7 +62,7 @@ struct SingleTopicResponse: Codable {
     
     let draftSequence: Int
     
-    let posted: Bool
+    let posted: Bool?
     
     let pinned: Bool
     
@@ -70,15 +70,15 @@ struct SingleTopicResponse: Codable {
     
     let highestPostNumber: Int
     
-    let lastReadPostNumber: Int
+    let lastReadPostNumber: Int?
     
-    let lastReadPostID: Int
+    let lastReadPostID: Int?
     
     let actionsSummary: [LatestTopicsResponseActionsSummary]
     
     let chunkSize: Int
     
-    let bookmarked: Bool
+    let bookmarked: Bool?
     
     let messageBusLastID: Int
     
@@ -318,7 +318,7 @@ struct PostStream: Codable {
     
     let posts: [Post]
     
-    let stream: [Int]
+    let stream: [Int]?
     
     
     
@@ -540,11 +540,11 @@ struct SuggestedTopic: Codable {
     
     let unseen: Bool
     
-    let lastReadPostNumber: Int
+    let lastReadPostNumber: Int?
     
-    let unread: Int
+    let unread: Int?
     
-    let newPosts: Int
+    let newPosts: Int?
     
     let pinned: Bool
     
@@ -556,11 +556,11 @@ struct SuggestedTopic: Codable {
     
     let archived: Bool
     
-    let notificationLevel: Int
+    let notificationLevel: Int?
     
-    let bookmarked: Bool
+    let bookmarked: Bool?
     
-    let liked: Bool
+    let liked: Bool?
     
     let archetype: String
     
@@ -644,7 +644,7 @@ struct SuggestedTopic: Codable {
 
 struct PosterSingleTopic: Codable {
     
-    let extras: String
+    let extras: String?
     
     let posterDescription: String
     
