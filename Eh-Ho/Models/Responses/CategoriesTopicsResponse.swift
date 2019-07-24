@@ -19,7 +19,7 @@ struct CategoriesTopicsResponse:Codable {
 struct CategoryList: Codable {
     let canCreateCategory: Bool?
     let canCreateTopic: Bool
-    let draft: Bool?
+    let draft: String?
     let draftKey: String
     let draftSequence: Int
     let categories: [SingleCategory]

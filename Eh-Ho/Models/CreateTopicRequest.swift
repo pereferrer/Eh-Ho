@@ -37,9 +37,7 @@ struct CreateTopicRequest: APIRequest {
     }
     
     var body: [String : Any] {
-        return ["title": title,
-                "raw": raw,
-                "created_at": createdAt]
+        return ["title": title, "raw": raw, "created_at": createdAt]
     }
     
     var headers: [String : String] {

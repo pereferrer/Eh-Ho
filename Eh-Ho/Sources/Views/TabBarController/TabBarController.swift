@@ -12,10 +12,12 @@ class TabBarController: UITabBarController {
 
     let topicsController: UIViewController
     let categoriesController: UIViewController
+    let createTopicController: UIViewController
     
-    init(topicsController: UIViewController, categoriesController: UIViewController) {
+    init(topicsController: UIViewController, categoriesController: UIViewController, createTopicController: UIViewController) {
         self.topicsController = topicsController
         self.categoriesController = categoriesController
+        self.createTopicController = createTopicController
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -37,8 +39,11 @@ class TabBarController: UITabBarController {
         let categoriesController = self.categoriesController
         categoriesController.tabBarItem = UITabBarItem(title: "Categories", image: nil, selectedImage: nil)
         
+        let createTopicController = self.createTopicController
+        createTopicController.tabBarItem = UITabBarItem(title: "Create topic", image: nil, selectedImage: nil)
+        
         self.tabBar.barTintColor = .white
-        let controllers = [categoriesController, topicsController]
+        let controllers = [categoriesController, topicsController, createTopicController]
         self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
     }
 }

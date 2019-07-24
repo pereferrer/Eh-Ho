@@ -34,8 +34,8 @@ class CategoriesTopicsViewModel {
             switch result {
             case .success(let value):
                 self?.view?.showCategories(categories: value.categoryList.categories)
-            case .failure:
-                self?.view?.showError(with: "Error")
+            case .failure(let value):
+                self?.view?.showError(with: value.localizedDescription)
             }
         }
     }

@@ -57,4 +57,11 @@ class TopicsRepositoryImpl: TopicsRepository {
             completion(result)
         }
     }
+    
+    func createTopic(title: String, raw: String, createAt: String, completion: @escaping (Result<AddNewTopicResponse, Error>) -> ()) {
+        let request = CreateTopicRequest(title: title, raw: raw, createdAt: createAt)
+        session.send(request: request){result in
+            completion(result)
+        }
+    }
 }

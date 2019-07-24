@@ -15,4 +15,5 @@ protocol TopicsRepository {
     func getTopicsByCategoryId(id: Int, completion: @escaping(Result<TopicsByCategoryResponse, Error>)-> ())
     func createPostToTopicId(id: Int, raw: String, completion: @escaping(Result<AddNewTopicResponse, Error>)-> ())
     func updateSingleTopic(id: Int, slug:String, title:String, completion: @escaping(Result<SingleTopicUpdateResponse, Error>)->())
+    func createTopic(title: String, raw: String, createAt: String, completion: @escaping(Result<AddNewTopicResponse, Error>)-> ())
 }

@@ -45,6 +45,10 @@
 		D153B71122E859D400BA4EA3 /* CreatePostsToTopicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B71022E859D400BA4EA3 /* CreatePostsToTopicRequest.swift */; };
 		D153B71322E865EB00BA4EA3 /* SingleTopicUpdateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B71222E865EB00BA4EA3 /* SingleTopicUpdateResponse.swift */; };
 		D153B71522E866AB00BA4EA3 /* SingleTopicUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B71422E866AB00BA4EA3 /* SingleTopicUpdateRequest.swift */; };
+		D153B71A22E8B12A00BA4EA3 /* CreateTopicRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B71922E8B12A00BA4EA3 /* CreateTopicRouter.swift */; };
+		D153B71C22E8B13600BA4EA3 /* CreateTopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B71B22E8B13600BA4EA3 /* CreateTopicViewModel.swift */; };
+		D153B71F22E8B14900BA4EA3 /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B71D22E8B14900BA4EA3 /* CreateTopicViewController.swift */; };
+		D153B72022E8B14900BA4EA3 /* CreateTopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D153B71E22E8B14900BA4EA3 /* CreateTopicViewController.xib */; };
 		D1EC187F22E59E6600132577 /* CategoriesTopicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC187E22E59E6600132577 /* CategoriesTopicsRequest.swift */; };
 		D1EC188122E59E9D00132577 /* CategoriesTopicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC188022E59E9D00132577 /* CategoriesTopicsResponse.swift */; };
 		D1EC188422E5A71A00132577 /* CategoriesTopicsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC188322E5A71A00132577 /* CategoriesTopicsRouter.swift */; };
@@ -94,6 +98,10 @@
 		D153B71022E859D400BA4EA3 /* CreatePostsToTopicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostsToTopicRequest.swift; sourceTree = "<group>"; };
 		D153B71222E865EB00BA4EA3 /* SingleTopicUpdateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTopicUpdateResponse.swift; sourceTree = "<group>"; };
 		D153B71422E866AB00BA4EA3 /* SingleTopicUpdateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTopicUpdateRequest.swift; sourceTree = "<group>"; };
+		D153B71922E8B12A00BA4EA3 /* CreateTopicRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTopicRouter.swift; sourceTree = "<group>"; };
+		D153B71B22E8B13600BA4EA3 /* CreateTopicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTopicViewModel.swift; sourceTree = "<group>"; };
+		D153B71D22E8B14900BA4EA3 /* CreateTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
+		D153B71E22E8B14900BA4EA3 /* CreateTopicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTopicViewController.xib; sourceTree = "<group>"; };
 		D1EC187E22E59E6600132577 /* CategoriesTopicsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTopicsRequest.swift; sourceTree = "<group>"; };
 		D1EC188022E59E9D00132577 /* CategoriesTopicsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTopicsResponse.swift; sourceTree = "<group>"; };
 		D1EC188322E5A71A00132577 /* CategoriesTopicsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTopicsRouter.swift; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 		742A18B022DE5420004C544D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D153B71822E8B11400BA4EA3 /* CreateTopic */,
 				D153B70722E76AE200BA4EA3 /* PostsByTopic */,
 				D153B6F622E6F18300BA4EA3 /* TopicsByCategory */,
 				D1EC188222E5A70C00132577 /* CategoriesTopics */,
@@ -314,6 +323,17 @@
 			path = PostsByTopic;
 			sourceTree = "<group>";
 		};
+		D153B71822E8B11400BA4EA3 /* CreateTopic */ = {
+			isa = PBXGroup;
+			children = (
+				D153B71922E8B12A00BA4EA3 /* CreateTopicRouter.swift */,
+				D153B71B22E8B13600BA4EA3 /* CreateTopicViewModel.swift */,
+				D153B71D22E8B14900BA4EA3 /* CreateTopicViewController.swift */,
+				D153B71E22E8B14900BA4EA3 /* CreateTopicViewController.xib */,
+			);
+			path = CreateTopic;
+			sourceTree = "<group>";
+		};
 		D1EC188222E5A70C00132577 /* CategoriesTopics */ = {
 			isa = PBXGroup;
 			children = (
@@ -388,6 +408,7 @@
 				742A18A422DE530B004C544D /* LaunchScreen.storyboard in Resources */,
 				D153B6FE22E6F1AB00BA4EA3 /* TopicsByCategoryViewController.xib in Resources */,
 				D1EC188A22E5A74B00132577 /* CategoriesTopicsViewController.xib in Resources */,
+				D153B72022E8B14900BA4EA3 /* CreateTopicViewController.xib in Resources */,
 				742A18A122DE530B004C544D /* Assets.xcassets in Resources */,
 				742A18B822DE5540004C544D /* TopicsViewController.xib in Resources */,
 				742A18D522DE7C47004C544D /* DetailTopicViewController.xib in Resources */,
@@ -418,10 +439,12 @@
 				742A18B322DE546B004C544D /* TabBarController.swift in Sources */,
 				742A18DD22DE81ED004C544D /* SingleTopicRequest.swift in Sources */,
 				D1EC187F22E59E6600132577 /* CategoriesTopicsRequest.swift in Sources */,
+				D153B71A22E8B12A00BA4EA3 /* CreateTopicRouter.swift in Sources */,
 				742A18D022DE789D004C544D /* UITableViewCellExten.swift in Sources */,
 				D153B71522E866AB00BA4EA3 /* SingleTopicUpdateRequest.swift in Sources */,
 				D1EC188422E5A71A00132577 /* CategoriesTopicsRouter.swift in Sources */,
 				D153B70E22E76B1A00BA4EA3 /* PostsByTopicViewController.swift in Sources */,
+				D153B71F22E8B14900BA4EA3 /* CreateTopicViewController.swift in Sources */,
 				D153B6F522E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift in Sources */,
 				742A18D922DE7C7C004C544D /* DetailTopicRouter.swift in Sources */,
 				742A18C622DE6999004C544D /* TopicsRepositoryImpl.swift in Sources */,
@@ -432,6 +455,7 @@
 				D153B6FA22E6F19D00BA4EA3 /* TopicsByCategoryViewModel.swift in Sources */,
 				D153B6F822E6F19200BA4EA3 /* TopicsByCategoryRouter.swift in Sources */,
 				D153B6FD22E6F1AB00BA4EA3 /* TopicsByCategoryViewController.swift in Sources */,
+				D153B71C22E8B13600BA4EA3 /* CreateTopicViewModel.swift in Sources */,
 				742A18DF22DE8526004C544D /* CreateTopicRequest.swift in Sources */,
 				742A18E122DE858A004C544D /* AddNewTopicResponse.swift in Sources */,
 				742A18BE22DE620C004C544D /* APIClient.swift in Sources */,
