@@ -70,7 +70,7 @@ extension TopicsViewController: TopicsViewControllerProtocol {
     }
     
     func showError(with message: String) {
-        //AQUI ENSEÑAMOS ALERTA
-        print("ERROR")
+        let alert = AlertViewPresenter(title: "Error", message: message, acceptTitle: "Entendido")
+        alert.present(in: self){ }
     }
 }

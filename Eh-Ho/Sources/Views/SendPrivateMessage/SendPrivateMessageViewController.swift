@@ -28,8 +28,6 @@ class SendPrivateMessageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Send private message"
     }
     
     @IBAction func sendMessage(_ sender: Any) {
@@ -42,22 +40,16 @@ class SendPrivateMessageViewController: UIViewController {
                 if(usersToSendMessage!.count > 0){
                     viewModel.didTapInSendPrivateMessage(title: titleToSendMessage!, targetUsernames: usersToSendMessage!, raw: messageToSend!, archetype: "private_message")
                 }else{
-                    let alert = UIAlertController(title: "Error", message: "Debe introducir al menos un usuario destinatario", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "Entendido", style: .default)
-                    alert.addAction(action)
-                    self.present(alert, animated: true, completion: nil)
+                    let alert = AlertViewPresenter(title: "Error", message: "Debe introducir al menos un usuario destinatario", acceptTitle: "Entendido")
+                    alert.present(in: self){ }
                 }
             }else{
-                let alert = UIAlertController(title: "Error", message: "El mensaje debe tener al menos 20 caracteres", preferredStyle: .alert)
-                let action = UIAlertAction(title: "Entendido", style: .default)
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: nil)
+                let alert = AlertViewPresenter(title: "Error", message: "El mensaje debe tener al menos 20 caracteres", acceptTitle: "Entendido")
+                alert.present(in: self){ }
             }
         }else{
-            let alert = UIAlertController(title: "Error", message: "El titulo debe tener al menos 2 caracteres", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Entendido", style: .default)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+            let alert = AlertViewPresenter(title: "Error", message: "El titulo debe tener al menos 2 caracteres", acceptTitle: "Entendido")
+            alert.present(in: self){ }
         }
     }
 }
@@ -70,10 +62,14 @@ protocol SendPrivateMessageViewControllerProtocol: class {
 
 extension SendPrivateMessageViewController: SendPrivateMessageViewControllerProtocol{
     func showMessageSend() {
-        print("Mensaje enviado")
+        let alert = AlertViewPresenter(title: "Success", message: "El mensaje se ha enviado correctamente", acceptTitle: "Entendido")
+        alert.present(in: self){
+            print("Se ha apretado en accept")
+        }
     }
     
     func showError(with message: String) {
-        print(message)
+        let alert = AlertViewPresenter(title: "Error", message: message, acceptTitle: "Entendido")
+        alert.present(in: self){ }
     }
 }

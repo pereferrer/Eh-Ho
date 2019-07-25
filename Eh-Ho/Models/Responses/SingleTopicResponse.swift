@@ -208,7 +208,7 @@ struct Details: Codable {
     
     let canEdit: Bool?
     
-    let canCreatePost: Bool
+    let canCreatePost: Bool?
     
     let canReplyAsNewTopic: Bool
     

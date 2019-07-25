@@ -28,7 +28,7 @@ class PostsByTopicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = "Posts"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 175
@@ -50,31 +50,18 @@ extension PostsByTopicViewController{
     }
     
     @objc private func addPosts(){
-        let alert = UIAlertController(title: "New Post", message: "Please input a new post", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Add post", style: .default) { (alertAction) in
-            let textField = alert.textFields![0] as UITextField
+        let alert = AlertViewPresenter(title: "New Post", message: "Please input a new post", acceptTitle: "Add post")
+        alert.presentWithTextField(in: self, textFieldPlaceHolder: "Enter the text for the post"){textField in
             self.viewModel.createPostToTopic(id: self.posts[0].topicID, raw: textField.text!)
         }
-        alert.addTextField { (textField) in
-            textField.placeholder = "Enter the text for the post"
-        }
-        alert.addAction(action)
-        self.present(alert, animated:true, completion: nil)
 
     }
     
     @objc private func editTopic(){
-        let alert = UIAlertController(title: "Edit topic", message: "Please update this topic", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Update topic", style: .default) { (alertAction) in
-            let textField = alert.textFields![0] as UITextField
+        let alert2 = AlertViewPresenter(title: "Edit topic", message: "Please update this topic", acceptTitle: "Update topic")
+        alert2.presentWithTextField(in: self, textFieldPlaceHolder: "Enter the new title for the topic"){textField in
             self.viewModel.updateTopic(id: self.posts[0].topicID, slug: "-", title: textField.text!)
         }
-        alert.addTextField { (textField) in
-            textField.placeholder = "Enter the new title for the topic"
-        }
-        alert.addAction(action)
-        self.present(alert, animated:true, completion: nil)
-        
     }
 }
 
@@ -117,6 +104,7 @@ extension PostsByTopicViewController: PostsByTopicViewControllerProtocol{
     }
     
     func showError(with message: String) {
-        print("ERROR")
+        let alert = AlertViewPresenter(title: "Error", message: message, acceptTitle: "Entendido")
+        alert.present(in: self){ }
     }
 }

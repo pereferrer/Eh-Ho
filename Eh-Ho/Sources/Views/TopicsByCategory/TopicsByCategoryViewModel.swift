@@ -36,8 +36,8 @@ class TopicsByCategoryViewModel {
             switch result {
             case .success(let value):
                 self.view?.showTopics(topics: value.topicList.topics)
-            case .failure(let error):
-                self.view?.showError(with: "Error")
+            case .failure(let value):
+                self.view?.showError(with: value.errors.joined(separator: ","))
                 break
             }
         }

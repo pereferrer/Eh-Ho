@@ -35,6 +35,8 @@
 		D131B2B422E9A8770010EEC2 /* SendPrivateMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131B2B322E9A8770010EEC2 /* SendPrivateMessageViewModel.swift */; };
 		D131B2B722E9A8820010EEC2 /* SendPrivateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131B2B522E9A8820010EEC2 /* SendPrivateMessageViewController.swift */; };
 		D131B2B822E9A8820010EEC2 /* SendPrivateMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D131B2B622E9A8820010EEC2 /* SendPrivateMessageViewController.xib */; };
+		D131B2BC22E9CAF70010EEC2 /* ApiErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131B2BB22E9CAF70010EEC2 /* ApiErrorResponse.swift */; };
+		D131B2BE22E9FFC50010EEC2 /* AlertViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131B2BD22E9FFC50010EEC2 /* AlertViewPresenter.swift */; };
 		D153B6F322E6EE3500BA4EA3 /* TopicsByCategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B6F222E6EE3500BA4EA3 /* TopicsByCategoryRequest.swift */; };
 		D153B6F522E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B6F422E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift */; };
 		D153B6F822E6F19200BA4EA3 /* TopicsByCategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B6F722E6F19200BA4EA3 /* TopicsByCategoryRouter.swift */; };
@@ -93,6 +95,8 @@
 		D131B2B322E9A8770010EEC2 /* SendPrivateMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPrivateMessageViewModel.swift; sourceTree = "<group>"; };
 		D131B2B522E9A8820010EEC2 /* SendPrivateMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPrivateMessageViewController.swift; sourceTree = "<group>"; };
 		D131B2B622E9A8820010EEC2 /* SendPrivateMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendPrivateMessageViewController.xib; sourceTree = "<group>"; };
+		D131B2BB22E9CAF70010EEC2 /* ApiErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorResponse.swift; sourceTree = "<group>"; };
+		D131B2BD22E9FFC50010EEC2 /* AlertViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewPresenter.swift; sourceTree = "<group>"; };
 		D153B6F222E6EE3500BA4EA3 /* TopicsByCategoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsByCategoryRequest.swift; sourceTree = "<group>"; };
 		D153B6F422E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsByCategoryResponse.swift; sourceTree = "<group>"; };
 		D153B6F722E6F19200BA4EA3 /* TopicsByCategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsByCategoryRouter.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 				D1EC188022E59E9D00132577 /* CategoriesTopicsResponse.swift */,
 				D153B6F422E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift */,
 				D153B71222E865EB00BA4EA3 /* SingleTopicUpdateResponse.swift */,
+				D131B2BB22E9CAF70010EEC2 /* ApiErrorResponse.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				742A18CF22DE789D004C544D /* UITableViewCellExten.swift */,
+				D131B2BD22E9FFC50010EEC2 /* AlertViewPresenter.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -471,9 +477,11 @@
 				D153B70E22E76B1A00BA4EA3 /* PostsByTopicViewController.swift in Sources */,
 				D153B71F22E8B14900BA4EA3 /* CreateTopicViewController.swift in Sources */,
 				D153B6F522E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift in Sources */,
+				D131B2BE22E9FFC50010EEC2 /* AlertViewPresenter.swift in Sources */,
 				742A18D922DE7C7C004C544D /* DetailTopicRouter.swift in Sources */,
 				D131B2B222E9A86B0010EEC2 /* SendPrivateMessageRouter.swift in Sources */,
 				742A18C622DE6999004C544D /* TopicsRepositoryImpl.swift in Sources */,
+				D131B2BC22E9CAF70010EEC2 /* ApiErrorResponse.swift in Sources */,
 				742A18D722DE7C65004C544D /* DetailTopicViewModel.swift in Sources */,
 				742A18CA22DE6F37004C544D /* TopicsViewModel.swift in Sources */,
 				742A18BC22DE581F004C544D /* APIRequest.swift in Sources */,

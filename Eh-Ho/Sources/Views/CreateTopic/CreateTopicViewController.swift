@@ -27,8 +27,6 @@ class CreateTopicViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "Crear topic"
     }
     
     @IBAction func createTopic(_ sender: Any) {
@@ -39,16 +37,12 @@ class CreateTopicViewController: UIViewController {
             if(descriptionCharacters >= 20){
                 viewModel.didTapInCreateTopic(title: titleTextField.text!, raw: descriptionTextField.text!, createAt: Date().description)
             }else{
-                let alert = UIAlertController(title: "Error", message: "La descripción debe tener al menos 20 caracteres", preferredStyle: .alert)
-                let action = UIAlertAction(title: "Entendido", style: .default)
-                alert.addAction(action)
-                self.present(alert, animated: true, completion: nil)
+                let alert = AlertViewPresenter(title: "Error", message: "La descripción debe tener al menos 20 caracteres", acceptTitle: "Entendido")
+                alert.present(in: self){ }
             }
         }else{
-            let alert = UIAlertController(title: "Error", message: "El titulo debe tener al menos 15 caracteres", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Entendido", style: .default)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
+            let alert = AlertViewPresenter(title: "Error", message: "El titulo debe tener al menos 15 caracteres", acceptTitle: "Entendido")
+            alert.present(in: self){ }
         }
     }
 }
@@ -61,16 +55,15 @@ protocol CreateTopicViewControllerProtocol: class {
 
 extension CreateTopicViewController: CreateTopicViewControllerProtocol{
     func showtopicCreated() {
-        let alert = UIAlertController(title: "Topic", message: "Topic creado correctamente", preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: .default) { (alertAction) in
+        let alert = AlertViewPresenter(title: "Topic", message: "Topic creado correctamente", acceptTitle: "Ok")
+        alert.present(in: self){
             self.titleTextField.text = ""
             self.descriptionTextField.text = ""
         }
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
     }
     
     func showError(with message: String) {
-        print(message)
+        let alert = AlertViewPresenter(title: "Error", message: message, acceptTitle: "Entendido")
+        alert.present(in: self){ }
     }
 }

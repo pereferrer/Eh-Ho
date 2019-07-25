@@ -27,6 +27,7 @@ class CategoriesTopicsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 60
@@ -85,8 +86,8 @@ extension CategoriesTopicsViewController: CategoriesTopicsViewControllerProtocol
     }
     
     func showError(with message: String) {
-        //AQUI ENSEÑAMOS ALERTA
-        print("ERROR")
         stopRefresh()
+        let alert = AlertViewPresenter(title: "Error", message: message, acceptTitle: "Entendido")
+        alert.present(in: self){ }
     }
 }

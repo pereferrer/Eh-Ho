@@ -27,7 +27,7 @@ class SendPrivateMessageViewModel {
             case .success:
                 self?.view?.showMessageSend()
             case .failure(let value):
-                self?.view?.showError(with: value.localizedDescription)
+                self?.view?.showError(with: value.errors.joined(separator: ","))
             }
         }
     }

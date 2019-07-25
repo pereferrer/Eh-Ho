@@ -9,12 +9,12 @@
 import Foundation
 
 protocol TopicsRepository {
-    func getSingleTopicById(id: Int, completion: @escaping(Result<SingleTopicResponse, Error>) -> ())
-    func getLatestTopics(completion: @escaping(Result<LatestTopicsResponse, Error>) -> ())
-    func getCategories(completion: @escaping(Result<CategoriesTopicsResponse, Error>)-> ())
-    func getTopicsByCategoryId(id: Int, completion: @escaping(Result<TopicsByCategoryResponse, Error>)-> ())
-    func createPostToTopicId(id: Int, raw: String, completion: @escaping(Result<AddNewTopicResponse, Error>)-> ())
-    func updateSingleTopic(id: Int, slug:String, title:String, completion: @escaping(Result<SingleTopicUpdateResponse, Error>)->())
-    func createTopic(title: String, raw: String, createAt: String, completion: @escaping(Result<AddNewTopicResponse, Error>)-> ())
-    func sendPrivateMessage(title: String, targetUsernames: String,raw: String, archetype: String, completion: @escaping(Result<AddNewTopicResponse, Error>)-> ())
+    func getSingleTopicById(id: Int, completion: @escaping(Result<SingleTopicResponse, ApiErrorResponse>) -> ())
+    func getLatestTopics(completion: @escaping(Result<LatestTopicsResponse, ApiErrorResponse>) -> ())
+    func getCategories(completion: @escaping(Result<CategoriesTopicsResponse, ApiErrorResponse>)-> ())
+    func getTopicsByCategoryId(id: Int, completion: @escaping(Result<TopicsByCategoryResponse, ApiErrorResponse>)-> ())
+    func createPostToTopicId(id: Int, raw: String, completion: @escaping(Result<AddNewTopicResponse, ApiErrorResponse>)-> ())
+    func updateSingleTopic(id: Int, slug:String, title:String, completion: @escaping(Result<SingleTopicUpdateResponse, ApiErrorResponse>)->())
+    func createTopic(title: String, raw: String, createAt: String, completion: @escaping(Result<AddNewTopicResponse, ApiErrorResponse>)-> ())
+    func sendPrivateMessage(title: String, targetUsernames: String,raw: String, archetype: String, completion: @escaping(Result<AddNewTopicResponse, ApiErrorResponse>)-> ())
 }

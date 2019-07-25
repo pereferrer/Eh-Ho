@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Views/PostsByTopic/PostsByTopicViewModel.swift"
-            timestampString = "585683131.564911"
+            timestampString = "585767712.9118561"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Views/CreateTopic/CreateTopicViewController.swift"
-            timestampString = "585740781.53556"
+            timestampString = "585767712.911985"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "createTopic(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Data/Remote/APIClient.swift"
-            timestampString = "585740781.535656"
+            timestampString = "585767712.91211"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Views/CreateTopic/CreateTopicViewModel.swift"
-            timestampString = "585683131.565174"
+            timestampString = "585767712.912237"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Data/Repositories/TopicsRepositoryImpl.swift"
-            timestampString = "585740781.535761"
+            timestampString = "585767712.9123451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Views/CreateTopic/CreateTopicViewController.swift"
-            timestampString = "585740781.535828"
+            timestampString = "585767712.912451"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "createTopic(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Views/CreateTopic/CreateTopicViewModel.swift"
-            timestampString = "585683131.565344"
+            timestampString = "585767712.912562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Views/SendPrivateMessage/SendPrivateMessageViewModel.swift"
-            timestampString = "585740781.535917"
+            timestampString = "585767712.9126559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -202,7 +202,7 @@
                   moduleName = "Eh-Ho"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/perejosepferrerventura/Desktop/Clases%20Completo/Proyecto%20final/Eh-Ho/Eh-Ho/Sources/Views/SendPrivateMessage/SendPrivateMessageViewModel.swift"
-                  timestampString = "585740017.172281"
+                  timestampString = "585765676.238022"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -213,11 +213,11 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Eh_Ho.AddNewTopicResponse, Swift.Error&gt;) -&gt; () in Eh_Ho.SendPrivateMessageViewModel.didTapInSendPrivateMessage(title: Swift.String, targetUsernames: Swift.String, raw: Swift.String, archetype: Swift.String) -&gt; ()"
+                  symbolName = "closure #1 (Swift.Result&lt;Eh_Ho.AddNewTopicResponse, Eh_Ho.ApiErrorResponse&gt;) -&gt; () in Eh_Ho.SendPrivateMessageViewModel.didTapInSendPrivateMessage(title: Swift.String, targetUsernames: Swift.String, raw: Swift.String, archetype: Swift.String) -&gt; ()"
                   moduleName = "Eh-Ho"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/perejosepferrerventura/Desktop/Clases%20Completo/Proyecto%20final/Eh-Ho/Eh-Ho/Sources/Views/SendPrivateMessage/SendPrivateMessageViewModel.swift"
-                  timestampString = "585740017.175087"
+                  timestampString = "585765676.240546"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "25"
@@ -234,12 +234,60 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Data/Remote/APIClient.swift"
-            timestampString = "585740781.535982"
+            timestampString = "585767712.912727"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "send(request:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eh-Ho/Sources/Views/DetailTopic/DetailTopicViewController.swift"
+            timestampString = "585763970.9810849"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eh-Ho/Sources/Views/PostsByTopic/PostsByTopicViewController.swift"
+            timestampString = "585767712.912896"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "editTopic()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eh-Ho/Sources/Views/PostsByTopic/PostsByTopicViewModel.swift"
+            timestampString = "585767712.912976"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "updateTopic(id:slug:title:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

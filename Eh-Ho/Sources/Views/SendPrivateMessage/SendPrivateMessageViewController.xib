@@ -24,46 +24,46 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="QUn-Gg-q0u">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <rect key="frame" x="10" y="44" width="394" height="818"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Escriba el titulo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLm-Dg-EJ2">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="112"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="112"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="feD-tV-gcU">
-                            <rect key="frame" x="0.0" y="112" width="414" height="98.5"/>
+                            <rect key="frame" x="0.0" y="112" width="394" height="98.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Escriba el mensaje" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojM-lE-Fai">
-                            <rect key="frame" x="0.0" y="210.5" width="414" height="112"/>
+                            <rect key="frame" x="0.0" y="210.5" width="394" height="112"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6KW-pT-mtz">
-                            <rect key="frame" x="0.0" y="322.5" width="414" height="98"/>
+                            <rect key="frame" x="0.0" y="322.5" width="394" height="98"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escriba los usuarios a mandar el mensaje separados por &quot;,&quot;. Ej: Pere, Nach" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCO-VT-B9C">
-                            <rect key="frame" x="0.0" y="420.5" width="414" height="112.5"/>
+                            <rect key="frame" x="0.0" y="420.5" width="394" height="112.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <color key="textColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pf7-Bv-rk9">
-                            <rect key="frame" x="0.0" y="533" width="414" height="98"/>
+                            <rect key="frame" x="0.0" y="533" width="394" height="98"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcE-8q-erS">
-                            <rect key="frame" x="0.0" y="631" width="414" height="187"/>
+                            <rect key="frame" x="0.0" y="631" width="394" height="187"/>
                             <fontDescription key="fontDescription" type="system" pointSize="23"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Enviar mensaje privado"/>
@@ -77,10 +77,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QUn-Gg-q0u" secondAttribute="trailing" id="ker-Zw-GfW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QUn-Gg-q0u" secondAttribute="trailing" constant="10" id="ker-Zw-GfW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QUn-Gg-q0u" secondAttribute="bottom" id="kkf-ic-vkw"/>
                 <constraint firstItem="QUn-Gg-q0u" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ml2-1t-aRS"/>
-                <constraint firstItem="QUn-Gg-q0u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="t5F-JA-vvo"/>
+                <constraint firstItem="QUn-Gg-q0u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="t5F-JA-vvo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

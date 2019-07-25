@@ -33,8 +33,8 @@ class DetailTopicViewModel {
             case .success(let value):
                 //Enviariamos a la vista para mostrar la info
                 print("LLEGA EL VALOR")
-            case .failure(let error):
-                //Enviaremos a la vista el error
+            case .failure(let value):
+                //self.view?.showError(with: value.errors.joined(separator: ","))
                 break
             }
         }

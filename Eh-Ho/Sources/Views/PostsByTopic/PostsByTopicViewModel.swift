@@ -33,8 +33,8 @@ class PostsByTopicViewModel {
             switch result {
             case .success:
                 self.fetchSingleTopic()
-            case .failure(let error):
-                self.view?.showError(with: "Error")
+            case .failure(let value):
+                self.view?.showError(with: value.errors.joined(separator: ","))
                 break
             }
         }
@@ -46,8 +46,8 @@ class PostsByTopicViewModel {
             switch result {
             case .success(let value):
                 self.view?.updateTopicFinished(title: value.basic_topic.title)
-            case .failure(let error):
-                self.view?.showError(with: "Error")
+            case .failure(let value):
+                self.view?.showError(with: value.errors.joined(separator: ","))
                 break
             }
         }

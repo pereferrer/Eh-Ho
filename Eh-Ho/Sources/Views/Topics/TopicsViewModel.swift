@@ -33,8 +33,8 @@ class TopicsViewModel {
             switch result {
             case .success(let value):
                 self?.view?.showLatestTopics(topics: value.topicList.topics)
-            case .failure:
-                self?.view?.showError(with: "Error")
+            case .failure(let value):
+                self?.view?.showError(with: value.errors.joined(separator: ","))
             }
         }
     }

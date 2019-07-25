@@ -27,7 +27,7 @@ class TopicsByCategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        title = "Topics"
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = 175
@@ -77,7 +77,7 @@ extension TopicsByCategoryViewController: TopicsByCategoryViewControllerProtocol
     }
     
     func showError(with message: String) {
-        //AQUI ENSEÑAMOS ALERTA
-        print("ERROR")
+        let alert = AlertViewPresenter(title: "Error", message: message, acceptTitle: "Entendido")
+        alert.present(in: self){ }
     }
 }

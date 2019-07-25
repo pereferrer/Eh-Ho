@@ -35,20 +35,22 @@ class TabBarController: UITabBarController {
     }
     
     private func configureTabBar() {
-        let topicsController = self.topicsController
-        topicsController.tabBarItem = UITabBarItem(title: "Topics", image: nil, selectedImage: nil)
         
         let categoriesController = self.categoriesController
-        categoriesController.tabBarItem = UITabBarItem(title: "Categories", image: nil, selectedImage: nil)
+        categoriesController.tabBarItem = UITabBarItem(title: "Categories", image: UIImage(named: "baseline_list_black_18dp"), selectedImage: nil)
+        categoriesController.title = "Categories"
         
         let createTopicController = self.createTopicController
-        createTopicController.tabBarItem = UITabBarItem(title: "Create topic", image: nil, selectedImage: nil)
+        createTopicController.tabBarItem = UITabBarItem(title: "Create topic", image: UIImage(named: "baseline_add_black_18dp"), selectedImage: nil)
+        createTopicController.title = "Create topic"
         
         let sendMessageController = self.sendMessageController
-        sendMessageController.tabBarItem = UITabBarItem(title: "Send message", image: nil, selectedImage: nil)
+        sendMessageController.tabBarItem = UITabBarItem(title: "Send message", image: UIImage(named: "baseline_message_black_18dp"), selectedImage: nil)
+        sendMessageController.title = "Send message"
+
         
         self.tabBar.barTintColor = .white
-        let controllers = [categoriesController, topicsController, createTopicController, sendMessageController]
+        let controllers = [categoriesController, createTopicController, sendMessageController]
         self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
     }
 }
