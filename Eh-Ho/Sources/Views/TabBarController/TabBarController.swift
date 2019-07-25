@@ -13,11 +13,13 @@ class TabBarController: UITabBarController {
     let topicsController: UIViewController
     let categoriesController: UIViewController
     let createTopicController: UIViewController
+    let sendMessageController: UIViewController
     
-    init(topicsController: UIViewController, categoriesController: UIViewController, createTopicController: UIViewController) {
+    init(topicsController: UIViewController, categoriesController: UIViewController, createTopicController: UIViewController, sendMessageController: UIViewController) {
         self.topicsController = topicsController
         self.categoriesController = categoriesController
         self.createTopicController = createTopicController
+        self.sendMessageController = sendMessageController
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -42,8 +44,11 @@ class TabBarController: UITabBarController {
         let createTopicController = self.createTopicController
         createTopicController.tabBarItem = UITabBarItem(title: "Create topic", image: nil, selectedImage: nil)
         
+        let sendMessageController = self.sendMessageController
+        sendMessageController.tabBarItem = UITabBarItem(title: "Send message", image: nil, selectedImage: nil)
+        
         self.tabBar.barTintColor = .white
-        let controllers = [categoriesController, topicsController, createTopicController]
+        let controllers = [categoriesController, topicsController, createTopicController, sendMessageController]
         self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }
     }
 }

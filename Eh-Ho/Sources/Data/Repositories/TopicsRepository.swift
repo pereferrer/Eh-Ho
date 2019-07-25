@@ -16,4 +16,5 @@ protocol TopicsRepository {
     func createPostToTopicId(id: Int, raw: String, completion: @escaping(Result<AddNewTopicResponse, Error>)-> ())
     func updateSingleTopic(id: Int, slug:String, title:String, completion: @escaping(Result<SingleTopicUpdateResponse, Error>)->())
     func createTopic(title: String, raw: String, createAt: String, completion: @escaping(Result<AddNewTopicResponse, Error>)-> ())
+    func sendPrivateMessage(title: String, targetUsernames: String,raw: String, archetype: String, completion: @escaping(Result<AddNewTopicResponse, Error>)-> ())
 }

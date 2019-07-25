@@ -30,6 +30,11 @@
 		742A18DD22DE81ED004C544D /* SingleTopicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18DC22DE81ED004C544D /* SingleTopicRequest.swift */; };
 		742A18DF22DE8526004C544D /* CreateTopicRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18DE22DE8526004C544D /* CreateTopicRequest.swift */; };
 		742A18E122DE858A004C544D /* AddNewTopicResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A18E022DE858A004C544D /* AddNewTopicResponse.swift */; };
+		D131B2AF22E9A5A60010EEC2 /* SendPrivateMessageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131B2AE22E9A5A60010EEC2 /* SendPrivateMessageRequest.swift */; };
+		D131B2B222E9A86B0010EEC2 /* SendPrivateMessageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131B2B122E9A86B0010EEC2 /* SendPrivateMessageRouter.swift */; };
+		D131B2B422E9A8770010EEC2 /* SendPrivateMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131B2B322E9A8770010EEC2 /* SendPrivateMessageViewModel.swift */; };
+		D131B2B722E9A8820010EEC2 /* SendPrivateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D131B2B522E9A8820010EEC2 /* SendPrivateMessageViewController.swift */; };
+		D131B2B822E9A8820010EEC2 /* SendPrivateMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D131B2B622E9A8820010EEC2 /* SendPrivateMessageViewController.xib */; };
 		D153B6F322E6EE3500BA4EA3 /* TopicsByCategoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B6F222E6EE3500BA4EA3 /* TopicsByCategoryRequest.swift */; };
 		D153B6F522E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B6F422E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift */; };
 		D153B6F822E6F19200BA4EA3 /* TopicsByCategoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B6F722E6F19200BA4EA3 /* TopicsByCategoryRouter.swift */; };
@@ -83,6 +88,11 @@
 		742A18DC22DE81ED004C544D /* SingleTopicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleTopicRequest.swift; sourceTree = "<group>"; };
 		742A18DE22DE8526004C544D /* CreateTopicRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTopicRequest.swift; sourceTree = "<group>"; };
 		742A18E022DE858A004C544D /* AddNewTopicResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTopicResponse.swift; sourceTree = "<group>"; };
+		D131B2AE22E9A5A60010EEC2 /* SendPrivateMessageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPrivateMessageRequest.swift; sourceTree = "<group>"; };
+		D131B2B122E9A86B0010EEC2 /* SendPrivateMessageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPrivateMessageRouter.swift; sourceTree = "<group>"; };
+		D131B2B322E9A8770010EEC2 /* SendPrivateMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPrivateMessageViewModel.swift; sourceTree = "<group>"; };
+		D131B2B522E9A8820010EEC2 /* SendPrivateMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendPrivateMessageViewController.swift; sourceTree = "<group>"; };
+		D131B2B622E9A8820010EEC2 /* SendPrivateMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendPrivateMessageViewController.xib; sourceTree = "<group>"; };
 		D153B6F222E6EE3500BA4EA3 /* TopicsByCategoryRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsByCategoryRequest.swift; sourceTree = "<group>"; };
 		D153B6F422E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsByCategoryResponse.swift; sourceTree = "<group>"; };
 		D153B6F722E6F19200BA4EA3 /* TopicsByCategoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsByCategoryRouter.swift; sourceTree = "<group>"; };
@@ -195,6 +205,7 @@
 		742A18B022DE5420004C544D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D131B2B022E9A8520010EEC2 /* SendPrivateMessage */,
 				D153B71822E8B11400BA4EA3 /* CreateTopic */,
 				D153B70722E76AE200BA4EA3 /* PostsByTopic */,
 				D153B6F622E6F18300BA4EA3 /* TopicsByCategory */,
@@ -254,6 +265,7 @@
 				D1EC187E22E59E6600132577 /* CategoriesTopicsRequest.swift */,
 				D153B71022E859D400BA4EA3 /* CreatePostsToTopicRequest.swift */,
 				D153B71422E866AB00BA4EA3 /* SingleTopicUpdateRequest.swift */,
+				D131B2AE22E9A5A60010EEC2 /* SendPrivateMessageRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -297,6 +309,17 @@
 				742A18D322DE7C47004C544D /* DetailTopicViewController.xib */,
 			);
 			path = DetailTopic;
+			sourceTree = "<group>";
+		};
+		D131B2B022E9A8520010EEC2 /* SendPrivateMessage */ = {
+			isa = PBXGroup;
+			children = (
+				D131B2B122E9A86B0010EEC2 /* SendPrivateMessageRouter.swift */,
+				D131B2B322E9A8770010EEC2 /* SendPrivateMessageViewModel.swift */,
+				D131B2B522E9A8820010EEC2 /* SendPrivateMessageViewController.swift */,
+				D131B2B622E9A8820010EEC2 /* SendPrivateMessageViewController.xib */,
+			);
+			path = SendPrivateMessage;
 			sourceTree = "<group>";
 		};
 		D153B6F622E6F18300BA4EA3 /* TopicsByCategory */ = {
@@ -405,6 +428,7 @@
 			files = (
 				D153B70222E6F57500BA4EA3 /* TopicsByCategoryTableViewCell.xib in Resources */,
 				D153B70F22E76B1A00BA4EA3 /* PostsByTopicViewController.xib in Resources */,
+				D131B2B822E9A8820010EEC2 /* SendPrivateMessageViewController.xib in Resources */,
 				742A18A422DE530B004C544D /* LaunchScreen.storyboard in Resources */,
 				D153B6FE22E6F1AB00BA4EA3 /* TopicsByCategoryViewController.xib in Resources */,
 				D1EC188A22E5A74B00132577 /* CategoriesTopicsViewController.xib in Resources */,
@@ -438,6 +462,7 @@
 				D1EC188122E59E9D00132577 /* CategoriesTopicsResponse.swift in Sources */,
 				742A18B322DE546B004C544D /* TabBarController.swift in Sources */,
 				742A18DD22DE81ED004C544D /* SingleTopicRequest.swift in Sources */,
+				D131B2B722E9A8820010EEC2 /* SendPrivateMessageViewController.swift in Sources */,
 				D1EC187F22E59E6600132577 /* CategoriesTopicsRequest.swift in Sources */,
 				D153B71A22E8B12A00BA4EA3 /* CreateTopicRouter.swift in Sources */,
 				742A18D022DE789D004C544D /* UITableViewCellExten.swift in Sources */,
@@ -447,13 +472,16 @@
 				D153B71F22E8B14900BA4EA3 /* CreateTopicViewController.swift in Sources */,
 				D153B6F522E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift in Sources */,
 				742A18D922DE7C7C004C544D /* DetailTopicRouter.swift in Sources */,
+				D131B2B222E9A86B0010EEC2 /* SendPrivateMessageRouter.swift in Sources */,
 				742A18C622DE6999004C544D /* TopicsRepositoryImpl.swift in Sources */,
 				742A18D722DE7C65004C544D /* DetailTopicViewModel.swift in Sources */,
 				742A18CA22DE6F37004C544D /* TopicsViewModel.swift in Sources */,
 				742A18BC22DE581F004C544D /* APIRequest.swift in Sources */,
 				D153B70922E76AF900BA4EA3 /* PostsByTopicRouter.swift in Sources */,
+				D131B2AF22E9A5A60010EEC2 /* SendPrivateMessageRequest.swift in Sources */,
 				D153B6FA22E6F19D00BA4EA3 /* TopicsByCategoryViewModel.swift in Sources */,
 				D153B6F822E6F19200BA4EA3 /* TopicsByCategoryRouter.swift in Sources */,
+				D131B2B422E9A8770010EEC2 /* SendPrivateMessageViewModel.swift in Sources */,
 				D153B6FD22E6F1AB00BA4EA3 /* TopicsByCategoryViewController.swift in Sources */,
 				D153B71C22E8B13600BA4EA3 /* CreateTopicViewModel.swift in Sources */,
 				742A18DF22DE8526004C544D /* CreateTopicRequest.swift in Sources */,

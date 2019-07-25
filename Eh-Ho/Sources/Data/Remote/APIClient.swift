@@ -22,6 +22,7 @@ final class SessionAPI {
         print("\(request.url)")
         let task = session.dataTask(with: request) { data, response, error in
             do {
+                print(String(data: data!, encoding: String.Encoding.utf8))
                 if let data = data {
                     let model = try JSONDecoder().decode(T.Response.self, from: data)
                     DispatchQueue.main.async {

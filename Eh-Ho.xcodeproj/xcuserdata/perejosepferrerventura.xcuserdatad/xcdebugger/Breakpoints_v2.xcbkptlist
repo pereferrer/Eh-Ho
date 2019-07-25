@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Views/CreateTopic/CreateTopicViewController.swift"
-            timestampString = "585683131.564994"
+            timestampString = "585740781.53556"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "53"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Data/Remote/APIClient.swift"
-            timestampString = "585683131.565074"
+            timestampString = "585740781.535656"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Data/Repositories/TopicsRepositoryImpl.swift"
-            timestampString = "585683131.5652471"
+            timestampString = "585740781.535761"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Eh-Ho/Sources/Views/CreateTopic/CreateTopicViewController.swift"
-            timestampString = "585683131.565298"
+            timestampString = "585740781.535828"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -177,6 +177,70 @@
                   offsetFromSymbolStart = "652">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eh-Ho/Sources/Views/SendPrivateMessage/SendPrivateMessageViewModel.swift"
+            timestampString = "585740781.535917"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "didTapInSendPrivateMessage(title:targetUsernames:raw:archetype:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Eh_Ho.SendPrivateMessageViewModel.didTapInSendPrivateMessage(title: Swift.String, targetUsernames: Swift.String, raw: Swift.String, archetype: Swift.String) -&gt; ()"
+                  moduleName = "Eh-Ho"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perejosepferrerventura/Desktop/Clases%20Completo/Proyecto%20final/Eh-Ho/Eh-Ho/Sources/Views/SendPrivateMessage/SendPrivateMessageViewModel.swift"
+                  timestampString = "585740017.172281"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "89">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Eh_Ho.AddNewTopicResponse, Swift.Error&gt;) -&gt; () in Eh_Ho.SendPrivateMessageViewModel.didTapInSendPrivateMessage(title: Swift.String, targetUsernames: Swift.String, raw: Swift.String, archetype: Swift.String) -&gt; ()"
+                  moduleName = "Eh-Ho"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perejosepferrerventura/Desktop/Clases%20Completo/Proyecto%20final/Eh-Ho/Eh-Ho/Sources/Views/SendPrivateMessage/SendPrivateMessageViewModel.swift"
+                  timestampString = "585740017.175087"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Eh-Ho/Sources/Data/Remote/APIClient.swift"
+            timestampString = "585740781.535982"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "send(request:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

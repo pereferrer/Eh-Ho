@@ -64,4 +64,11 @@ class TopicsRepositoryImpl: TopicsRepository {
             completion(result)
         }
     }
+    
+    func sendPrivateMessage(title: String, targetUsernames: String, raw: String, archetype: String, completion: @escaping (Result<AddNewTopicResponse, Error>) -> ()) {
+        let request = SendPrivateMessageRequest(title: title, targetUsernames: targetUsernames, raw: raw, archetype: archetype)
+        session.send(request: request){result in
+            completion(result)
+        }
+    }
 }
