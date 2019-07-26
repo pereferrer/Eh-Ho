@@ -2,7 +2,7 @@
 //  APIClient.swift
 //  Eh-Ho
 //
-//  Created by Ignacio Garcia Sainz on 16/07/2019.
+//  Created by Pere Josep Ferrer Ventura on 23/07/2019.
 //  Copyright © 2019 KeepCoding. All rights reserved.
 //
 
@@ -19,10 +19,8 @@ final class SessionAPI {
     
     func send<T: APIRequest>(request: T, completion: @escaping(Result<T.Response, ApiErrorResponse>) -> ()) {
         let request = request.requestWithBaseUrl()
-        //print("\(request.url)")
         let task = session.dataTask(with: request) { data, response, error in
             do {
-                print(String(data: data!, encoding: String.Encoding.utf8))
                 if let data = data {
                     let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
                     if let _ = json?["errors"] {
@@ -37,7 +35,6 @@ final class SessionAPI {
                     }
                 }
             } catch let error {
-                print(error)
                 DispatchQueue.main.async {
                     let apiError = ApiErrorResponse(errors: [error.localizedDescription], action: "An error ocurred, try again later!")
                     completion(.failure(apiError))

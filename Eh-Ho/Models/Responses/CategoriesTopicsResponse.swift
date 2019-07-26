@@ -36,7 +36,6 @@ struct CategoryList: Codable {
 }
 
 
-//He escogido este nombre debido a que Category ya existe y quería evitar problemas
 struct SingleCategory: Codable{
     let id: Int
     let name: String

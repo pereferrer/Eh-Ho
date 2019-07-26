@@ -64,7 +64,9 @@ extension SendPrivateMessageViewController: SendPrivateMessageViewControllerProt
     func showMessageSend() {
         let alert = AlertViewPresenter(title: "Success", message: "El mensaje se ha enviado correctamente", acceptTitle: "Entendido")
         alert.present(in: self){
-            print("Se ha apretado en accept")
+            self.messageTextField.text = ""
+            self.usersTextField.text = ""
+            self.titleTextField.text = ""
         }
     }
     

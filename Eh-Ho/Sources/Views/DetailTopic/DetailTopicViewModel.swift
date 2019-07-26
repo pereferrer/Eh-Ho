@@ -32,7 +32,7 @@ class DetailTopicViewModel {
             switch result {
             case .success(let value):
                 //Enviariamos a la vista para mostrar la info
-                print("LLEGA EL VALOR")
+                break
             case .failure(let value):
                 //self.view?.showError(with: value.errors.joined(separator: ","))
                 break

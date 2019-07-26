@@ -34,6 +34,10 @@ class TopicsByCategoryViewController: UIViewController {
         let cell = UINib(nibName: cellIdentifier, bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: cellIdentifier)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         viewModel.viewDidLoad()
     }
 }

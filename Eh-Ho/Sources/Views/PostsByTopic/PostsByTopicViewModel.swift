@@ -58,8 +58,8 @@ class PostsByTopicViewModel {
             switch result {
             case .success(let value):
                 self.view?.showPosts(posts: value.postStream.posts, canEditTopic: value.details.canEdit ?? false)
-            case .failure(let error):
-                //Enviaremos a la vista el error
+            case .failure(let value):
+                self.view?.showError(with: value.errors.joined(separator: ","))
                 break
             }
         }

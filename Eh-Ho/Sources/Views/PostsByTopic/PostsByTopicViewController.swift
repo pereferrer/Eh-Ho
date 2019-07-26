@@ -78,7 +78,7 @@ extension PostsByTopicViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
-        cell.textLabel?.text = posts[indexPath.row].cooked
+        cell.textLabel?.text = posts[indexPath.row].cooked.deleteHtmlTags()
         return cell
     }
 }
