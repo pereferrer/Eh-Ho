@@ -91,3 +91,7 @@ struct SingleCategory: Codable{
         case descriptionExcerpt = "description_excerpt"
     }
 }
+
+
+
+

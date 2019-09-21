@@ -3,6 +3,23 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in PostsByTopicViewModel.fetchSingleTopic():PostsByTopicViewModel.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CategoriesTopicsViewModel.insertCategoriesToCoreData(categoriesTopicsResponse:):CategoriesTopicsViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "$0.id">
+            </PersistentString>
+            <PersistentString
+               value = "categories[0].id">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in DatabaseCoreData.selectPostsByTopic(id:):DatabaseCoreData.swift">
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in TopicsByCategoryViewModel.fetchSingleTopic(id:completion:):TopicsByCategoryViewModel.swift">
          <PersistentStrings>
             <PersistentString

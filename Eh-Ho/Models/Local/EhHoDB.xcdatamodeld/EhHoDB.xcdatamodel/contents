@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CategoryCD" representedClassName="CategoryCD" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="topics" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="TopicCD" inverseName="category" inverseEntity="TopicCD" syncable="YES"/>
+    </entity>
+    <entity name="PostCD" representedClassName="PostCD" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="topic" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="TopicCD" inverseName="posts" inverseEntity="TopicCD" syncable="YES"/>
+    </entity>
+    <entity name="TopicCD" representedClassName="TopicCD" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="visits" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CategoryCD" inverseName="topics" inverseEntity="CategoryCD" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PostCD" inverseName="topic" inverseEntity="PostCD" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CategoryCD" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="TopicCD" positionX="-54" positionY="-9" width="128" height="120"/>
+        <element name="PostCD" positionX="-36" positionY="9" width="128" height="90"/>
+    </elements>
+</model>

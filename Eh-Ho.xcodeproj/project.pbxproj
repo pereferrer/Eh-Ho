@@ -57,6 +57,12 @@
 		D153B71F22E8B14900BA4EA3 /* CreateTopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153B71D22E8B14900BA4EA3 /* CreateTopicViewController.swift */; };
 		D153B72022E8B14900BA4EA3 /* CreateTopicViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D153B71E22E8B14900BA4EA3 /* CreateTopicViewController.xib */; };
 		D1B6E42B22EAECE500D737E8 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B6E42A22EAECE500D737E8 /* StringExtensions.swift */; };
+		D1E9B900232B96D200EE9AA8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9B8FF232B96D200EE9AA8 /* DataManager.swift */; };
+		D1E9B902232B974200EE9AA8 /* DatabaseCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E9B901232B974200EE9AA8 /* DatabaseCoreData.swift */; };
+		D1EABE8C23352A38000BB344 /* EhHoDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE8A23352A38000BB344 /* EhHoDB.xcdatamodeld */; };
+		D1EABE8E233554D1000BB344 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE8D233554D1000BB344 /* CategoryModel.swift */; };
+		D1EABE9023355515000BB344 /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE8F23355515000BB344 /* TopicModel.swift */; };
+		D1EABE9223355558000BB344 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE9123355558000BB344 /* PostModel.swift */; };
 		D1EC187F22E59E6600132577 /* CategoriesTopicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC187E22E59E6600132577 /* CategoriesTopicsRequest.swift */; };
 		D1EC188122E59E9D00132577 /* CategoriesTopicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC188022E59E9D00132577 /* CategoriesTopicsResponse.swift */; };
 		D1EC188422E5A71A00132577 /* CategoriesTopicsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC188322E5A71A00132577 /* CategoriesTopicsRouter.swift */; };
@@ -118,6 +124,12 @@
 		D153B71D22E8B14900BA4EA3 /* CreateTopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTopicViewController.swift; sourceTree = "<group>"; };
 		D153B71E22E8B14900BA4EA3 /* CreateTopicViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateTopicViewController.xib; sourceTree = "<group>"; };
 		D1B6E42A22EAECE500D737E8 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		D1E9B8FF232B96D200EE9AA8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		D1E9B901232B974200EE9AA8 /* DatabaseCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCoreData.swift; sourceTree = "<group>"; };
+		D1EABE8B23352A38000BB344 /* EhHoDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EhHoDB.xcdatamodel; sourceTree = "<group>"; };
+		D1EABE8D233554D1000BB344 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		D1EABE8F23355515000BB344 /* TopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
+		D1EABE9123355558000BB344 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		D1EC187E22E59E6600132577 /* CategoriesTopicsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTopicsRequest.swift; sourceTree = "<group>"; };
 		D1EC188022E59E9D00132577 /* CategoriesTopicsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTopicsResponse.swift; sourceTree = "<group>"; };
 		D1EC188322E5A71A00132577 /* CategoriesTopicsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTopicsRouter.swift; sourceTree = "<group>"; };
@@ -263,6 +275,7 @@
 		742A18BF22DE6483004C544D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D1E9B8FB232B961300EE9AA8 /* Local */,
 				742A18CB22DE74A5004C544D /* Responses */,
 				D153B6F222E6EE3500BA4EA3 /* TopicsByCategoryRequest.swift */,
 				742A18C022DE649F004C544D /* LatestTopicsRequest.swift */,
@@ -366,6 +379,19 @@
 			path = CreateTopic;
 			sourceTree = "<group>";
 		};
+		D1E9B8FB232B961300EE9AA8 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				D1E9B8FF232B96D200EE9AA8 /* DataManager.swift */,
+				D1E9B901232B974200EE9AA8 /* DatabaseCoreData.swift */,
+				D1EABE8A23352A38000BB344 /* EhHoDB.xcdatamodeld */,
+				D1EABE8D233554D1000BB344 /* CategoryModel.swift */,
+				D1EABE8F23355515000BB344 /* TopicModel.swift */,
+				D1EABE9123355558000BB344 /* PostModel.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		D1EC188222E5A70C00132577 /* CategoriesTopics */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,17 +486,20 @@
 				D153B70B22E76B0300BA4EA3 /* PostsByTopicViewModel.swift in Sources */,
 				D153B71122E859D400BA4EA3 /* CreatePostsToTopicRequest.swift in Sources */,
 				742A18C122DE649F004C544D /* LatestTopicsRequest.swift in Sources */,
+				D1EABE9223355558000BB344 /* PostModel.swift in Sources */,
 				742A189A22DE5309004C544D /* AppDelegate.swift in Sources */,
 				742A18CD22DE74B8004C544D /* LatestTopicsResponse.swift in Sources */,
 				742A18C422DE694E004C544D /* TopicsRepository.swift in Sources */,
 				D1EC188622E5A72500132577 /* CategoriesTopicsViewModel.swift in Sources */,
 				742A18DB22DE8136004C544D /* SingleTopicResponse.swift in Sources */,
 				D1EC188922E5A74B00132577 /* CategoriesTopicsViewController.swift in Sources */,
+				D1E9B900232B96D200EE9AA8 /* DataManager.swift in Sources */,
 				742A18D422DE7C47004C544D /* DetailTopicViewController.swift in Sources */,
 				D1B6E42B22EAECE500D737E8 /* StringExtensions.swift in Sources */,
 				742A18C822DE6F23004C544D /* TopicsRouter.swift in Sources */,
 				D1EC188122E59E9D00132577 /* CategoriesTopicsResponse.swift in Sources */,
 				742A18B322DE546B004C544D /* TabBarController.swift in Sources */,
+				D1EABE8E233554D1000BB344 /* CategoryModel.swift in Sources */,
 				742A18DD22DE81ED004C544D /* SingleTopicRequest.swift in Sources */,
 				D131B2B722E9A8820010EEC2 /* SendPrivateMessageViewController.swift in Sources */,
 				D1EC187F22E59E6600132577 /* CategoriesTopicsRequest.swift in Sources */,
@@ -479,6 +508,7 @@
 				D153B71522E866AB00BA4EA3 /* SingleTopicUpdateRequest.swift in Sources */,
 				D1EC188422E5A71A00132577 /* CategoriesTopicsRouter.swift in Sources */,
 				D153B70E22E76B1A00BA4EA3 /* PostsByTopicViewController.swift in Sources */,
+				D1EABE9023355515000BB344 /* TopicModel.swift in Sources */,
 				D153B71F22E8B14900BA4EA3 /* CreateTopicViewController.swift in Sources */,
 				D153B6F522E6EE7500BA4EA3 /* TopicsByCategoryResponse.swift in Sources */,
 				D131B2BE22E9FFC50010EEC2 /* AlertViewPresenter.swift in Sources */,
@@ -498,6 +528,8 @@
 				D153B71C22E8B13600BA4EA3 /* CreateTopicViewModel.swift in Sources */,
 				742A18DF22DE8526004C544D /* CreateTopicRequest.swift in Sources */,
 				742A18E122DE858A004C544D /* AddNewTopicResponse.swift in Sources */,
+				D1E9B902232B974200EE9AA8 /* DatabaseCoreData.swift in Sources */,
+				D1EABE8C23352A38000BB344 /* EhHoDB.xcdatamodeld in Sources */,
 				742A18BE22DE620C004C544D /* APIClient.swift in Sources */,
 				742A18B722DE5540004C544D /* TopicsViewController.swift in Sources */,
 				D153B6F322E6EE3500BA4EA3 /* TopicsByCategoryRequest.swift in Sources */,
@@ -690,6 +722,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D1EABE8A23352A38000BB344 /* EhHoDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D1EABE8B23352A38000BB344 /* EhHoDB.xcdatamodel */,
+			);
+			currentVersion = D1EABE8B23352A38000BB344 /* EhHoDB.xcdatamodel */;
+			path = EhHoDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 742A188E22DE5309004C544D /* Project object */;
 }

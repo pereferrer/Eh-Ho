@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ActionsSummaryCD" representedClassName="ActionsSummaryCD" syncable="YES" codeGenerationType="class">
+        <attribute name="canAct" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="actionsSummary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AddNewTopicResponseCD" inverseName="actionsSummary" inverseEntity="AddNewTopicResponseCD" syncable="YES"/>
+    </entity>
+    <entity name="AddNewTopicResponseCD" representedClassName="AddNewTopicResponseCD" syncable="YES" codeGenerationType="class">
+        <attribute name="admin" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="avatarTemplate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="canDelete" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canEdit" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canRecover" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canViewEditHistory" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canWiki" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cooked" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayUsername" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="draftSequence" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hidden" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incomingLinkCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="moderator" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="quoteCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="reads" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="replyCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="staff" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicSlug" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="trustLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userDeleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="version" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wiki" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="yours" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="actionsSummary" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ActionsSummaryCD" inverseName="actionsSummary" inverseEntity="ActionsSummaryCD" syncable="YES"/>
+    </entity>
+    <entity name="Basic_topicCD" representedClassName="Basic_topicCD" syncable="YES" codeGenerationType="class">
+        <attribute name="fancyTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="basic_topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SingleTopicUpdateResponseCD" inverseName="basic_topic" inverseEntity="SingleTopicUpdateResponseCD" syncable="YES"/>
+    </entity>
+    <entity name="CategoriesTopicsResponseCD" representedClassName="CategoriesTopicsResponseCD" syncable="YES" codeGenerationType="class">
+        <relationship name="categoryList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryListCD" inverseName="categoryList" inverseEntity="CategoryListCD" syncable="YES"/>
+    </entity>
+    <entity name="CategoryListCD" representedClassName="CategoryListCD" syncable="YES" codeGenerationType="class">
+        <attribute name="canCreateCategory" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canCreateTopic" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="draft" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="draftKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="draftSequence" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SingleCategoryCD" inverseName="categories" inverseEntity="SingleCategoryCD" syncable="YES"/>
+        <relationship name="categoryList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoriesTopicsResponseCD" inverseName="categoryList" inverseEntity="CategoriesTopicsResponseCD" syncable="YES"/>
+    </entity>
+    <entity name="CreatedByCD" representedClassName="CreatedByCD" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarTemplate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="createdBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DetailsCD" inverseName="createdBy" inverseEntity="DetailsCD" syncable="YES"/>
+        <relationship name="lastPoster" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DetailsCD" inverseName="lastPoster" inverseEntity="DetailsCD" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PosterSingleTopicCD" inverseName="user" inverseEntity="PosterSingleTopicCD" syncable="YES"/>
+    </entity>
+    <entity name="DetailsCD" representedClassName="DetailsCD" syncable="YES" codeGenerationType="class">
+        <attribute name="canCreatePost" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canEdit" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canFlagTopic" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canReplyAsNewTopic" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notificationLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notificationsReasonID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="createdBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreatedByCD" inverseName="createdBy" inverseEntity="CreatedByCD" syncable="YES"/>
+        <relationship name="details" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SingleTopicResponseCD" inverseName="details" inverseEntity="SingleTopicResponseCD" syncable="YES"/>
+        <relationship name="lastPoster" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreatedByCD" inverseName="lastPoster" inverseEntity="CreatedByCD" syncable="YES"/>
+        <relationship name="participants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ParticipantCD" inverseName="participants" inverseEntity="ParticipantCD" syncable="YES"/>
+    </entity>
+    <entity name="LatestTopicsResponseActionsSummaryCD" representedClassName="LatestTopicsResponseActionsSummaryCD" syncable="YES" codeGenerationType="class">
+        <attribute name="canAct" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hidden" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="actionsSummary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SingleTopicResponseCD" inverseName="actionsSummary" inverseEntity="SingleTopicResponseCD" syncable="YES"/>
+    </entity>
+    <entity name="LatestTopicsResponseCD" representedClassName="LatestTopicsResponseCD" syncable="YES" codeGenerationType="class">
+        <relationship name="topicList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicListCD" inverseName="topicList" inverseEntity="TopicListCD" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserCD" inverseName="latestTopicsResponse" inverseEntity="UserCD" syncable="YES"/>
+    </entity>
+    <entity name="ParticipantCD" representedClassName="ParticipantCD" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarTemplate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="participants" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DetailsCD" inverseName="participants" inverseEntity="DetailsCD" syncable="YES"/>
+    </entity>
+    <entity name="PostActionsSummaryCD" representedClassName="PostActionsSummaryCD" syncable="YES" codeGenerationType="class">
+        <attribute name="canAct" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="actionsSummary" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PostCD" inverseName="actionsSummary" inverseEntity="PostCD" syncable="YES"/>
+    </entity>
+    <entity name="PostCD" representedClassName="PostCD" syncable="YES" codeGenerationType="class">
+        <attribute name="admin" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="avatarTemplate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bookmarked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canDelete" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canEdit" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canRecover" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canViewEditHistory" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="canWiki" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cooked" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayUsername" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hidden" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="incomingLinkCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="moderator" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="postNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postType" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="quoteCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="read" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="reads" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="replyCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="score" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="staff" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicSlug" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trustLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userDeleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 32" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="version" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wiki" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="yours" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="actionsSummary" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PostActionsSummaryCD" inverseName="actionsSummary" inverseEntity="PostActionsSummaryCD" syncable="YES"/>
+        <relationship name="posts" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PostStreamCD" inverseName="posts" inverseEntity="PostStreamCD" syncable="YES"/>
+    </entity>
+    <entity name="PosterCD" representedClassName="PosterCD" syncable="YES" codeGenerationType="class">
+        <attribute name="extras" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="posterDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicCD" inverseName="posters" inverseEntity="TopicCD" syncable="YES"/>
+    </entity>
+    <entity name="PosterSingleTopicCD" representedClassName="PosterSingleTopicCD" syncable="YES" codeGenerationType="class">
+        <attribute name="extras" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="posterDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="posters" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SuggestedTopicCD" inverseName="posters" inverseEntity="SuggestedTopicCD" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CreatedByCD" inverseName="user" inverseEntity="CreatedByCD" syncable="YES"/>
+    </entity>
+    <entity name="PostStreamCD" representedClassName="PostStreamCD" syncable="YES" codeGenerationType="class">
+        <attribute name="stream" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="posts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PostCD" inverseName="posts" inverseEntity="PostCD" syncable="YES"/>
+        <relationship name="postStream" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SingleTopicResponseCD" inverseName="postStream" inverseEntity="SingleTopicResponseCD" syncable="YES"/>
+    </entity>
+    <entity name="SingleCategoryCD" representedClassName="SingleCategoryCD" syncable="YES" codeGenerationType="class">
+        <attribute name="backgroundUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="canEdit" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionExcerpt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="descriptionText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desscription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasChildren" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="logoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="permission" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="position" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="readRestricted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="slug" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="topicCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicsAllTime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicsDay" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicsMonth" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicsWeek" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicsYear" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="topicTemplate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="topicUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CategoryListCD" inverseName="categories" inverseEntity="CategoryListCD" syncable="YES"/>
+    </entity>
+    <entity name="SingleTopicResponseCD" representedClassName="SingleTopicResponseCD" syncable="YES" codeGenerationType="class">
+        <attribute name="archetype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="archived" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bookmarked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="categoryID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="chunkSize" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="closed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="currentPostNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="draftKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="draftSequence" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fancyTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasSummary" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="highestPostNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastPostedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastReadPostID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="lastReadPostNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="likeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="messageBusLastID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="participantCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pinned" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pinnedGlobally" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="posted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="replyCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="slug" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="timelineLookup" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="views" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="visible" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="wordCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="actionsSummary" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LatestTopicsResponseActionsSummaryCD" inverseName="actionsSummary" inverseEntity="LatestTopicsResponseActionsSummaryCD" syncable="YES"/>
+        <relationship name="details" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DetailsCD" inverseName="details" inverseEntity="DetailsCD" syncable="YES"/>
+        <relationship name="postStream" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PostStreamCD" inverseName="postStream" inverseEntity="PostStreamCD" syncable="YES"/>
+        <relationship name="suggestedTopics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SuggestedTopicCD" inverseName="suggestedTopics" inverseEntity="SuggestedTopicCD" syncable="YES"/>
+    </entity>
+    <entity name="SingleTopicUpdateResponseCD" representedClassName="SingleTopicUpdateResponseCD" syncable="YES" codeGenerationType="class">
+        <relationship name="basic_topic" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Basic_topicCD" inverseName="basic_topic" inverseEntity="Basic_topicCD" syncable="YES"/>
+    </entity>
+    <entity name="SuggestedTopicCD" representedClassName="SuggestedTopicCD" syncable="YES" codeGenerationType="class">
+        <attribute name="archetype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="archived" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bookmarked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bumped" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bumpedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="closed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fancyTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="highestPostNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastPostedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastReadPostNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="likeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="liked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="newPosts" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notificationLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pinned" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="replyCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="slug" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unpinned" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="unread" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="unseen" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="views" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="visible" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="posters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PosterSingleTopicCD" inverseName="posters" inverseEntity="PosterSingleTopicCD" syncable="YES"/>
+        <relationship name="suggestedTopics" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SingleTopicResponseCD" inverseName="suggestedTopics" inverseEntity="SingleTopicResponseCD" syncable="YES"/>
+    </entity>
+    <entity name="TopicCD" representedClassName="TopicCD" syncable="YES" codeGenerationType="class">
+        <attribute name="archetype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="archived" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bookmarked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bookmarkedPostNumbers" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="bumped" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="bumpedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="categoryID" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="closed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fancyTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hasSummary" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="highestPostNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imageURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastPostedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastPosterUsername" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastReadPostNumber" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="likeCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="liked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="newPosts" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="notificationLevel" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pinned" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="pinnedGlobally" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="postsCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="replyCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="slug" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="unpinned" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="unread" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="unseen" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="views" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="visible" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="posters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PosterCD" inverseName="topic" inverseEntity="PosterCD" syncable="YES"/>
+        <relationship name="topicList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicListCD" inverseName="topics" inverseEntity="TopicListCD" syncable="YES"/>
+    </entity>
+    <entity name="TopicListCD" representedClassName="TopicListCD" syncable="YES" codeGenerationType="class">
+        <attribute name="canCreateTopic" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="draftKey" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="draftSequence" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="perPage" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="topicList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LatestTopicsResponseCD" inverseName="topicList" inverseEntity="LatestTopicsResponseCD" syncable="YES"/>
+        <relationship name="topicListTopicsByCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicsByCategoryResponseCD" inverseName="topicList" inverseEntity="TopicsByCategoryResponseCD" syncable="YES"/>
+        <relationship name="topics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TopicCD" inverseName="topicList" inverseEntity="TopicCD" syncable="YES"/>
+    </entity>
+    <entity name="TopicsByCategoryResponseCD" representedClassName="TopicsByCategoryResponseCD" syncable="YES" codeGenerationType="class">
+        <relationship name="topicList" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicListCD" inverseName="topicListTopicsByCategory" inverseEntity="TopicListCD" syncable="YES"/>
+        <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserCD" inverseName="users" inverseEntity="UserCD" syncable="YES"/>
+    </entity>
+    <entity name="UserCD" representedClassName="UserCD" syncable="YES" codeGenerationType="class">
+        <attribute name="avatarTemplate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="latestTopicsResponse" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LatestTopicsResponseCD" inverseName="users" inverseEntity="LatestTopicsResponseCD" syncable="YES"/>
+        <relationship name="users" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TopicsByCategoryResponseCD" inverseName="users" inverseEntity="TopicsByCategoryResponseCD" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ActionsSummaryCD" positionX="108" positionY="162" width="128" height="90"/>
+        <element name="AddNewTopicResponseCD" positionX="117" positionY="171" width="128" height="555"/>
+        <element name="Basic_topicCD" positionX="108" positionY="162" width="128" height="120"/>
+        <element name="CategoriesTopicsResponseCD" positionX="81" positionY="135" width="128" height="60"/>
+        <element name="CategoryListCD" positionX="135" positionY="189" width="128" height="150"/>
+        <element name="CreatedByCD" positionX="126" positionY="351" width="128" height="150"/>
+        <element name="DetailsCD" positionX="81" positionY="135" width="128" height="195"/>
+        <element name="LatestTopicsResponseActionsSummaryCD" positionX="90" positionY="144" width="128" height="120"/>
+        <element name="LatestTopicsResponseCD" positionX="117" positionY="342" width="128" height="75"/>
+        <element name="ParticipantCD" positionX="117" positionY="171" width="128" height="135"/>
+        <element name="PostActionsSummaryCD" positionX="90" positionY="378" width="128" height="90"/>
+        <element name="PostCD" positionX="99" positionY="387" width="128" height="585"/>
+        <element name="PosterCD" positionX="-91.8984375" positionY="491.46484375" width="128" height="103"/>
+        <element name="PosterSingleTopicCD" positionX="135" positionY="360" width="128" height="105"/>
+        <element name="PostStreamCD" positionX="108" positionY="162" width="128" height="90"/>
+        <element name="SingleCategoryCD" positionX="126" positionY="180" width="128" height="435"/>
+        <element name="SingleTopicResponseCD" positionX="99" positionY="153" width="128" height="585"/>
+        <element name="SingleTopicUpdateResponseCD" positionX="99" positionY="153" width="128" height="60"/>
+        <element name="SuggestedTopicCD" positionX="81" positionY="306" width="128" height="495"/>
+        <element name="TopicCD" positionX="248.44140625" positionY="128.82421875" width="128" height="553"/>
+        <element name="TopicListCD" positionX="108" positionY="333" width="128" height="150"/>
+        <element name="TopicsByCategoryResponseCD" positionX="90" positionY="144" width="128" height="75"/>
+        <element name="UserCD" positionX="-63" positionY="-18" width="128" height="133"/>
+    </elements>
+</model>
