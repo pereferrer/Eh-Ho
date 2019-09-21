@@ -33,9 +33,11 @@ protocol DataManagerDelegate {
 
 class DataManager{
     private let mDatabaseProvider: DataManagerDelegate
+    private var mUserPreferences: UserDefaultPreferences
     
     init() {
         mDatabaseProvider = DatabaseCoreData()
+        mUserPreferences = UserDefaultPreferences()
     }
 }
 
@@ -114,5 +116,26 @@ extension DataManager {
     
     func update(post: Post){
         return mDatabaseProvider.update(post: post)
+    }
+}
+
+//Extension for userDefaults data
+extension DataManager{
+    
+    func saveLastSync(date: Date){
+        mUserPreferences.saveLastSync(date: date)
+    }
+    
+    func getLastSync()->Date{
+        return mUserPreferences.getLastSync() ?? Calendar.current.date(byAdding: .year, value: -10, to: Date())!
+    }
+    
+    //FUnción para saber si ha pasado el tiempo mínimo para poder actualizar los datos en coreData
+    func canInsertToCoreData()->Bool{
+        let lastSync:Date = getLastSync()
+        if(lastSync.minutes(from: lastSync) > MIN_TIME_TO_SYNC_COREDATA_WITH_API) {
+            return true
+        }
+        return false
     }
 }

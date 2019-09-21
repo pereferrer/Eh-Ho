@@ -63,6 +63,10 @@
 		D1EABE8E233554D1000BB344 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE8D233554D1000BB344 /* CategoryModel.swift */; };
 		D1EABE9023355515000BB344 /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE8F23355515000BB344 /* TopicModel.swift */; };
 		D1EABE9223355558000BB344 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE9123355558000BB344 /* PostModel.swift */; };
+		D1EABE9523362756000BB344 /* UserDefaultsPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE9423362756000BB344 /* UserDefaultsPreferences.swift */; };
+		D1EABE97233628EC000BB344 /* GlobalsVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE96233628EC000BB344 /* GlobalsVariables.swift */; };
+		D1EABE9923362F75000BB344 /* CheckInternetStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE9823362F75000BB344 /* CheckInternetStatus.swift */; };
+		D1EABE9B23368A62000BB344 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EABE9A23368A62000BB344 /* DateExtensions.swift */; };
 		D1EC187F22E59E6600132577 /* CategoriesTopicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC187E22E59E6600132577 /* CategoriesTopicsRequest.swift */; };
 		D1EC188122E59E9D00132577 /* CategoriesTopicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC188022E59E9D00132577 /* CategoriesTopicsResponse.swift */; };
 		D1EC188422E5A71A00132577 /* CategoriesTopicsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EC188322E5A71A00132577 /* CategoriesTopicsRouter.swift */; };
@@ -130,6 +134,10 @@
 		D1EABE8D233554D1000BB344 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		D1EABE8F23355515000BB344 /* TopicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
 		D1EABE9123355558000BB344 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		D1EABE9423362756000BB344 /* UserDefaultsPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsPreferences.swift; sourceTree = "<group>"; };
+		D1EABE96233628EC000BB344 /* GlobalsVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalsVariables.swift; sourceTree = "<group>"; };
+		D1EABE9823362F75000BB344 /* CheckInternetStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInternetStatus.swift; sourceTree = "<group>"; };
+		D1EABE9A23368A62000BB344 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		D1EC187E22E59E6600132577 /* CategoriesTopicsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTopicsRequest.swift; sourceTree = "<group>"; };
 		D1EC188022E59E9D00132577 /* CategoriesTopicsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTopicsResponse.swift; sourceTree = "<group>"; };
 		D1EC188322E5A71A00132577 /* CategoriesTopicsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTopicsRouter.swift; sourceTree = "<group>"; };
@@ -318,6 +326,9 @@
 				742A18CF22DE789D004C544D /* UITableViewCellExten.swift */,
 				D131B2BD22E9FFC50010EEC2 /* AlertViewPresenter.swift */,
 				D1B6E42A22EAECE500D737E8 /* StringExtensions.swift */,
+				D1EABE96233628EC000BB344 /* GlobalsVariables.swift */,
+				D1EABE9823362F75000BB344 /* CheckInternetStatus.swift */,
+				D1EABE9A23368A62000BB344 /* DateExtensions.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -382,6 +393,7 @@
 		D1E9B8FB232B961300EE9AA8 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				D1EABE9323362740000BB344 /* UserDefaults */,
 				D1E9B8FF232B96D200EE9AA8 /* DataManager.swift */,
 				D1E9B901232B974200EE9AA8 /* DatabaseCoreData.swift */,
 				D1EABE8A23352A38000BB344 /* EhHoDB.xcdatamodeld */,
@@ -390,6 +402,14 @@
 				D1EABE9123355558000BB344 /* PostModel.swift */,
 			);
 			path = Local;
+			sourceTree = "<group>";
+		};
+		D1EABE9323362740000BB344 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				D1EABE9423362756000BB344 /* UserDefaultsPreferences.swift */,
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		D1EC188222E5A70C00132577 /* CategoriesTopics */ = {
@@ -483,6 +503,7 @@
 			files = (
 				D153B70122E6F57500BA4EA3 /* TopicsByCategoryTableViewCell.swift in Sources */,
 				D153B71322E865EB00BA4EA3 /* SingleTopicUpdateResponse.swift in Sources */,
+				D1EABE97233628EC000BB344 /* GlobalsVariables.swift in Sources */,
 				D153B70B22E76B0300BA4EA3 /* PostsByTopicViewModel.swift in Sources */,
 				D153B71122E859D400BA4EA3 /* CreatePostsToTopicRequest.swift in Sources */,
 				742A18C122DE649F004C544D /* LatestTopicsRequest.swift in Sources */,
@@ -491,6 +512,7 @@
 				742A18CD22DE74B8004C544D /* LatestTopicsResponse.swift in Sources */,
 				742A18C422DE694E004C544D /* TopicsRepository.swift in Sources */,
 				D1EC188622E5A72500132577 /* CategoriesTopicsViewModel.swift in Sources */,
+				D1EABE9523362756000BB344 /* UserDefaultsPreferences.swift in Sources */,
 				742A18DB22DE8136004C544D /* SingleTopicResponse.swift in Sources */,
 				D1EC188922E5A74B00132577 /* CategoriesTopicsViewController.swift in Sources */,
 				D1E9B900232B96D200EE9AA8 /* DataManager.swift in Sources */,
@@ -500,6 +522,7 @@
 				D1EC188122E59E9D00132577 /* CategoriesTopicsResponse.swift in Sources */,
 				742A18B322DE546B004C544D /* TabBarController.swift in Sources */,
 				D1EABE8E233554D1000BB344 /* CategoryModel.swift in Sources */,
+				D1EABE9B23368A62000BB344 /* DateExtensions.swift in Sources */,
 				742A18DD22DE81ED004C544D /* SingleTopicRequest.swift in Sources */,
 				D131B2B722E9A8820010EEC2 /* SendPrivateMessageViewController.swift in Sources */,
 				D1EC187F22E59E6600132577 /* CategoriesTopicsRequest.swift in Sources */,
@@ -528,6 +551,7 @@
 				D153B71C22E8B13600BA4EA3 /* CreateTopicViewModel.swift in Sources */,
 				742A18DF22DE8526004C544D /* CreateTopicRequest.swift in Sources */,
 				742A18E122DE858A004C544D /* AddNewTopicResponse.swift in Sources */,
+				D1EABE9923362F75000BB344 /* CheckInternetStatus.swift in Sources */,
 				D1E9B902232B974200EE9AA8 /* DatabaseCoreData.swift in Sources */,
 				D1EABE8C23352A38000BB344 /* EhHoDB.xcdatamodeld in Sources */,
 				742A18BE22DE620C004C544D /* APIClient.swift in Sources */,
@@ -671,6 +695,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TZ9BPM5KV;
 				INFOPLIST_FILE = "Eh-Ho/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -688,6 +713,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TZ9BPM5KV;
 				INFOPLIST_FILE = "Eh-Ho/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

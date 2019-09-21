@@ -17,7 +17,7 @@ class TopicsByCategoryRouter {
         
         let router = TopicsByCategoryRouter()
         let sessionApi = SessionAPI()
-        let dataManager = DatabaseCoreData()
+        let dataManager = DataManager()
         let topicsRepository = TopicsRepositoryImpl(session: sessionApi)
         let viewModel = TopicsByCategoryViewModel(id: id, router: router, topicsRepository: topicsRepository, dataManager: dataManager)
         let viewController = TopicsByCategoryViewController(viewModel: viewModel)

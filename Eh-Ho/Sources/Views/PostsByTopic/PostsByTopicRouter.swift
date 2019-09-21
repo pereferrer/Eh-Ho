@@ -18,7 +18,7 @@ class PostsByTopicRouter {
         let router = PostsByTopicRouter()
         let sessionApi = SessionAPI()
         let topicsRepository = TopicsRepositoryImpl(session: sessionApi)
-        let dataManager = DatabaseCoreData()
+        let dataManager = DataManager()
         let viewModel = PostsByTopicViewModel(id: id, router: router, topicsRepository: topicsRepository, dataManager: dataManager)
         let viewController = PostsByTopicViewController(viewModel: viewModel)
         

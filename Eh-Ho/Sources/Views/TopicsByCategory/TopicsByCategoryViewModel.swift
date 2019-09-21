@@ -14,12 +14,12 @@ class TopicsByCategoryViewModel {
     let id: Int
     let router: TopicsByCategoryRouter
     let topicsRepository: TopicsRepository
-    let dataManager: DatabaseCoreData
+    let dataManager: DataManager
     
     init(id: Int,
          router: TopicsByCategoryRouter,
          topicsRepository: TopicsRepository,
-         dataManager:DatabaseCoreData) {
+         dataManager:DataManager) {
         self.id = id
         self.router = router
         self.topicsRepository = topicsRepository
@@ -35,18 +35,37 @@ class TopicsByCategoryViewModel {
     }
     
     private func fetchTopicsByCategory() {
-        topicsRepository.getTopicsByCategoryId(id: id){ result in
-            switch result {
-            case .success(let value):
-                self.insertTopicsToCoreDataBy(idCategory: Int32(self.id), topicsCategoryResponse: value)
-                self.view?.showTopics(topics: value.topicList.topics)
-            case .failure(let value):
-                self.view?.showError(with: value.errors.joined(separator: ","))
-                break
+        
+        if #available(iOS 12.0, *) {
+            if(networkStatus){//Si hay conexión a internet muestro los datos obtenidos de la api
+                topicsRepository.getTopicsByCategoryId(id: id){ result in
+                    switch result {
+                    case .success(let value):
+                        if(self.dataManager.canInsertToCoreData()){//Compruebo si ha pasado el tiempo mínimo para poder actualizar CoreData -> El sync del Date que se guarda en las preferencias se establece en el appDelegate al cerrar la app o al pasar a Background
+                            self.insertTopicsToCoreDataBy(idCategory: Int32(self.id), topicsCategoryResponse: value)
+                        }
+                        
+                        let topicsData:Array<TopicModel> = value.topicList.topics.compactMap{topics in
+                            let id = topics.id
+                            let title = topics.title
+                            let visits = topics.views
+                            return TopicModel(id: id, title: title, visits: visits)
+                        }
+                        
+                        self.view?.showTopics(topics: topicsData)
+                    case .failure(let value):
+                        self.view?.showError(with: value.errors.joined(separator: ","))
+                        break
+                    }
+                }
+            }else{//Si no hay conexión
+                let topicsData = self.dataManager.selectTopicsByCategory(id: Int32(id))
+                self.view?.showTopics(topics: topicsData)
             }
+        } else {
+            // Fallback on earlier versions
         }
     }
-    
     
     private func insertTopicsToCoreDataBy(idCategory: Int32, topicsCategoryResponse:TopicsByCategoryResponse){
         let topicInCD = self.dataManager.selectTopicsByCategory(id: idCategory)

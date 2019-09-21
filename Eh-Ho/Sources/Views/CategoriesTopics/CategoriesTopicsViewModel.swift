@@ -13,11 +13,11 @@ class CategoriesTopicsViewModel {
     weak var view: CategoriesTopicsViewControllerProtocol?
     let router: CategoriesTopicsRouter
     let topicsRepository: TopicsRepository
-    let dataManager: DatabaseCoreData
+    let dataManager: DataManager
     
     init(router: CategoriesTopicsRouter,
          topicsRepository: TopicsRepository,
-         dataManager:DatabaseCoreData) {
+         dataManager:DataManager) {
         self.router = router
         self.topicsRepository = topicsRepository
         self.dataManager = dataManager
@@ -33,14 +33,30 @@ class CategoriesTopicsViewModel {
     
     private func fetchCategories() {
         
-        topicsRepository.getCategories{[weak self] result in
-            switch result {
-            case .success(let value):
-                self?.insertCategoriesToCoreData(categoriesTopicsResponse: value)
-                self?.view?.showCategories(categories: value.categoryList.categories)
-            case .failure(let value):
-                self?.view?.showError(with: value.errors.joined(separator: ","))
+        if #available(iOS 12.0, *) {
+            if(networkStatus){//Si hay conexión a internet muestro los datos obtenidos de la api
+                topicsRepository.getCategories{[weak self] result in
+                    switch result {
+                    case .success(let value):
+                        if(self!.dataManager.canInsertToCoreData()){//Compruebo si ha pasado el tiempo mínimo para poder actualizar CoreData -> El sync del Date que se guarda en las preferencias se establece en el appDelegate al cerrar la app o al pasar a Background
+                            self?.insertCategoriesToCoreData(categoriesTopicsResponse: value)
+                        }                        
+                        let categoriesData:Array<CategoryModel> = value.categoryList.categories.compactMap{category in
+                            let id = category.id
+                            let title = category.name
+                            return CategoryModel(id: id, title: title)
+                        }
+                        self?.view?.showCategories(categories: categoriesData)
+                    case .failure(let value):
+                        self?.view?.showError(with: value.errors.joined(separator: ","))
+                    }
+                }
+            }else{//Si no hay conexión
+                let categoriesData = self.dataManager.selectCategories()
+                self.view?.showCategories(categories: categoriesData)
             }
+        } else {
+            // Fallback on earlier versions
         }
     }
     
@@ -72,13 +88,3 @@ class CategoriesTopicsViewModel {
         }
     }
 }
-
-
-/*
- Logica implementada
- 
- 1-Si no hay categorias en coredata, inserto todas las que devuelve la api
- 2- Si hay categorias en coredata, las recupero y miro si existen en las categorias devueltas por la api. Si no esta en la api elimino la categoria, si estan hago un update de la categoria de la bd. Si estan en la api y no en coredata las creo
- 3- Lo mismo para topics y posts
- 
- */

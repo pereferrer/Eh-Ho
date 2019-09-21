@@ -13,7 +13,7 @@ class PostsByTopicViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel:PostsByTopicViewModel
-    var posts:[Post] = []
+    var posts:[PostModel] = []
     var canEditTopic: Bool = false
     var titleTopic: String = ""
     
@@ -52,7 +52,7 @@ extension PostsByTopicViewController{
     @objc private func addPosts(){
         let alert = AlertViewPresenter(title: "New Post", message: "Please input a new post", acceptTitle: "Add post")
         alert.presentWithTextField(in: self, textFieldPlaceHolder: "Enter the text for the post"){textField in
-            self.viewModel.createPostToTopic(id: self.posts[0].topicID, raw: textField.text!)
+            self.viewModel.createPostToTopic(id: self.posts[0].id, raw: textField.text!)
         }
 
     }
@@ -60,7 +60,7 @@ extension PostsByTopicViewController{
     @objc private func editTopic(){
         let alert2 = AlertViewPresenter(title: "Edit topic", message: "Please update this topic", acceptTitle: "Update topic")
         alert2.presentWithTextField(in: self, textFieldPlaceHolder: "Enter the new title for the topic"){textField in
-            self.viewModel.updateTopic(id: self.posts[0].topicID, slug: "-", title: textField.text!)
+            self.viewModel.updateTopic(id: self.posts[0].id, slug: "-", title: textField.text!)
         }
     }
 }
@@ -78,14 +78,14 @@ extension PostsByTopicViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
-        cell.textLabel?.text = posts[indexPath.row].cooked.deleteHtmlTags()
+        cell.textLabel?.text = posts[indexPath.row].title
         return cell
     }
 }
 
 // MARK: - ViewModel Communication
 protocol PostsByTopicViewControllerProtocol: class {
-    func showPosts(posts: [Post], canEditTopic: Bool)
+    func showPosts(posts: [PostModel], canEditTopic: Bool)
     func showError(with message: String)
     func updateTopicFinished(title: String)
 }
@@ -96,7 +96,7 @@ extension PostsByTopicViewController: PostsByTopicViewControllerProtocol{
         self.titleTopic = title
     }
     
-    func showPosts(posts: [Post], canEditTopic: Bool) {
+    func showPosts(posts: [PostModel], canEditTopic: Bool) {
         self.posts = posts
         self.canEditTopic = canEditTopic
         self.tableView.reloadData()

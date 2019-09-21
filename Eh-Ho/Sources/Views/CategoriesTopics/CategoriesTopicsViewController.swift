@@ -13,7 +13,7 @@ class CategoriesTopicsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let viewModel: CategoriesTopicsViewModel
-    var categories: [SingleCategory] = []
+    var categories: [CategoryModel] = []
     
     init(categoriesTopicsViewModel: CategoriesTopicsViewModel){
         self.viewModel = categoriesTopicsViewModel
@@ -65,7 +65,7 @@ extension CategoriesTopicsViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.identifier, for: indexPath)
-        cell.textLabel?.text = categories[indexPath.row].name
+        cell.textLabel?.text = categories[indexPath.row].title
         return cell
     }
     
@@ -74,12 +74,12 @@ extension CategoriesTopicsViewController: UITableViewDataSource{
 
 // MARK: - ViewModel Communication
 protocol CategoriesTopicsViewControllerProtocol: class {
-    func showCategories(categories: [SingleCategory])
+    func showCategories(categories: [CategoryModel])
     func showError(with message: String)
 }
 
 extension CategoriesTopicsViewController: CategoriesTopicsViewControllerProtocol{
-    func showCategories(categories: [SingleCategory]) {
+    func showCategories(categories: [CategoryModel]) {
         self.categories = categories
         self.tableView.reloadData()
         stopRefresh()

@@ -14,7 +14,7 @@
  1-Si no hay categorias en coredata, inserto todas las que devuelve la api
  2- Si hay catergorias en coredata, las recupero y miro si existen en las categorias devueltas por la api. Si no esta en la api elimino la categoria, si estan hago un update de la categoria de la bd. Si estan en la api y no en coredata las creo
  3- Lo mismo para topics y posts
- 
+ 4- La fecha de último sync se establece en el AppDelegate, al cerrar o entrar la app en Background
  */
 
 import UIKit
@@ -39,8 +39,6 @@ class DatabaseCoreData: DataManagerDelegate {
                 return
         }
         
-        
-        
         for singleCategory in categoriesTopicsResponse.categoryList.categories{
             let category = NSManagedObject(entity: entity, insertInto: context)
             category.setValue(Int32(singleCategory.id), forKey: "id")
@@ -50,7 +48,7 @@ class DatabaseCoreData: DataManagerDelegate {
         do{
             try context.save()
         }catch{
-            print("Error al guardar el objeto")
+            print("Error al guardar las categorias")
         }
     }
     
@@ -68,7 +66,7 @@ class DatabaseCoreData: DataManagerDelegate {
         do{
             try context.save()
         }catch{
-            print("Error al guardar el objeto")
+            print("Error al guardar una categoria")
         }
     }
     

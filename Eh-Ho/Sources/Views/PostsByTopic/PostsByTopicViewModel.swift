@@ -14,12 +14,12 @@ class PostsByTopicViewModel {
     let id: Int
     let router: PostsByTopicRouter
     let topicsRepository: TopicsRepository
-    let dataManager: DatabaseCoreData
+    let dataManager: DataManager
     
     init(id: Int,
          router: PostsByTopicRouter,
          topicsRepository: TopicsRepository,
-         dataManager:DatabaseCoreData) {
+         dataManager:DataManager) {
         self.id = id
         self.router = router
         self.topicsRepository = topicsRepository
@@ -57,16 +57,35 @@ class PostsByTopicViewModel {
     }
     
     private func fetchSingleTopic() {
-        topicsRepository.getSingleTopicById(id: id) { result in
-            switch result {
-            case .success(let value):
-                self.insertPostsToCoreDataBy(idTopic: Int32(self.id), singleTopicResponse: value)
-                self.view?.showPosts(posts: value.postStream.posts, canEditTopic: value.details.canEdit ?? false)
-            case .failure(let value):
-                self.view?.showError(with: value.errors.joined(separator: ","))
-                break
+        
+        if #available(iOS 12.0, *) {
+            if(networkStatus){//Si hay conexión a internet muestro los datos obtenidos de la api
+                topicsRepository.getSingleTopicById(id: id) { result in
+                    switch result {
+                    case .success(let value):
+                        if(self.dataManager.canInsertToCoreData()){//Compruebo si ha pasado el tiempo mínimo para poder actualizar CoreData -> El sync del Date que se guarda en las preferencias se establece en el appDelegate al cerrar la app o al pasar a Background
+                            self.insertPostsToCoreDataBy(idTopic: Int32(self.id), singleTopicResponse: value)
+                        }
+                        
+                        let postsData:Array<PostModel> = value.postStream.posts.compactMap{posts in
+                            let id = posts.id
+                            let title = posts.cooked.deleteHtmlTags()
+                            return PostModel(id: id, title: title)
+                        }
+                        
+                        self.view?.showPosts(posts: postsData, canEditTopic: value.details.canEdit ?? false)
+                    case .failure(let value):
+                        self.view?.showError(with: value.errors.joined(separator: ","))
+                        break
+                    }
+                }
+            }else{//Si no hay conexión
+                let postsData = self.dataManager.selectPostsByTopic(id: Int32(id))
+                self.view?.showPosts(posts: postsData, canEditTopic: false)
             }
-        }
+        } else {
+            // Fallback on earlier versions
+        } 
     }
     
     

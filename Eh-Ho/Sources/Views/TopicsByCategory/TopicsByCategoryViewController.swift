@@ -14,7 +14,7 @@ class TopicsByCategoryViewController: UIViewController {
     
     let cellIdentifier = "TopicsByCategoryTableViewCell"
     let viewModel:TopicsByCategoryViewModel
-    var topics:[Topic] = []
+    var topics:[TopicModel] = []
     
     init(viewModel: TopicsByCategoryViewModel){
         self.viewModel = viewModel
@@ -60,7 +60,7 @@ extension TopicsByCategoryViewController: UITableViewDataSource{
         }
         
         cell.titleLabel.text = topics[indexPath.row].title
-        cell.countVisits.text = "Visits: " + String(topics[indexPath.row].views)
+        cell.countVisits.text = "Visits: " + String(topics[indexPath.row].visits)
         
         
         return cell
@@ -69,13 +69,13 @@ extension TopicsByCategoryViewController: UITableViewDataSource{
 
 // MARK: - ViewModel Communication
 protocol TopicsByCategoryViewControllerProtocol: class {
-    func showTopics(topics: [Topic])
+    func showTopics(topics: [TopicModel])
     func showError(with message: String)
 }
 
 extension TopicsByCategoryViewController: TopicsByCategoryViewControllerProtocol{
     
-    func showTopics(topics: [Topic]) {
+    func showTopics(topics: [TopicModel]) {
         self.topics = topics
         self.tableView.reloadData()
     }

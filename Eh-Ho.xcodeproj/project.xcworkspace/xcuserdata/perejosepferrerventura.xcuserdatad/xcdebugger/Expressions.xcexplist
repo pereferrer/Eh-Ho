@@ -6,6 +6,20 @@
          contextName = "closure #1 in PostsByTopicViewModel.fetchSingleTopic():PostsByTopicViewModel.swift">
       </ContextState>
       <ContextState
+         contextName = "closure #1 in DatabaseCoreData.selectPostsByTopic(id:):DatabaseCoreData.swift">
+      </ContextState>
+      <ContextState
+         contextName = "TopicsByCategoryViewModel.fetchTopicsByCategory():TopicsByCategoryViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "networkStatus">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PostsByTopicViewModel.insertPostsToCoreDataBy(idTopic:singleTopicResponse:):PostsByTopicViewModel.swift">
+      </ContextState>
+      <ContextState
          contextName = "CategoriesTopicsViewModel.insertCategoriesToCoreData(categoriesTopicsResponse:):CategoriesTopicsViewModel.swift">
          <PersistentStrings>
             <PersistentString
@@ -17,13 +31,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "closure #1 in DatabaseCoreData.selectPostsByTopic(id:):DatabaseCoreData.swift">
+         contextName = "TopicsByCategoryViewModel.insertTopicsToCoreDataBy(idCategory:topicsCategoryResponse:):TopicsByCategoryViewModel.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in TopicsByCategoryViewModel.fetchSingleTopic(id:completion:):TopicsByCategoryViewModel.swift">
          <PersistentStrings>
             <PersistentString
                value = "value.details.canEdit">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CategoriesTopicsViewModel.canInsertToCoreData():CategoriesTopicsViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lastSync.minutes(from: lastSync)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

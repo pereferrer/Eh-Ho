@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        checkNetwork()
+        
         let paths = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)
         print(paths[0])
         
@@ -42,8 +44,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        saveDatabaseContext()
+        setLastSyncData()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -55,7 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        saveDatabaseContext()
+        setLastSyncData()
     }
 
 
@@ -73,5 +76,19 @@ extension AppDelegate{
                 print("Error Coredata save context")
             }
         }
+    }
+    
+    func checkNetwork(){
+        if #available(iOS 12.0, *) {
+            let networkStatus = CheckInternetStatus()
+            networkStatus.checkConnetionStatus()
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
+    func setLastSyncData(){
+        let dataManager = DataManager()
+        dataManager.saveLastSync(date: Date())
     }
 }
