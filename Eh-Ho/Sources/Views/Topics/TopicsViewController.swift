@@ -35,6 +35,8 @@ class TopicsViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.identifier)
         
         viewModel.viewDidLoad()
+        
+        self.title = "PERE"
     }
 }
 

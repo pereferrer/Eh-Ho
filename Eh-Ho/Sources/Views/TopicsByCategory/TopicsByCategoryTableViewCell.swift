@@ -12,6 +12,9 @@ class TopicsByCategoryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var countVisits: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var replies: UILabel!
+    @IBOutlet weak var date: UILabel!
     
     
     override func awakeFromNib() {
@@ -24,4 +27,9 @@ class TopicsByCategoryTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configureCell() {
+        self.profileImage.roundImage()
+    }
+    
 }

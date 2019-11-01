@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PostsByTopicHeader" customModule="Eh_Ho" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="102"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HtW-yA-OZw">
+                    <rect key="frame" x="0.0" y="0.0" width="327" height="102"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic flinal porque me voy a dormir en el teclado" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRk-qy-BYd">
+                            <rect key="frame" x="16" y="0.0" width="279" height="102"/>
+                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="28"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="xRk-qy-BYd" firstAttribute="leading" secondItem="HtW-yA-OZw" secondAttribute="leading" constant="16" id="DiG-aq-ONk"/>
+                        <constraint firstItem="xRk-qy-BYd" firstAttribute="top" secondItem="HtW-yA-OZw" secondAttribute="top" id="FNo-d2-GQB"/>
+                        <constraint firstAttribute="trailing" secondItem="xRk-qy-BYd" secondAttribute="trailing" constant="32" id="chK-Dd-ocr"/>
+                        <constraint firstAttribute="bottom" secondItem="xRk-qy-BYd" secondAttribute="bottom" id="f0g-Kr-XMY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="HtW-yA-OZw" secondAttribute="trailing" id="6Kq-TZ-m3l"/>
+                <constraint firstAttribute="bottom" secondItem="HtW-yA-OZw" secondAttribute="bottom" id="WOK-Nw-RBF"/>
+                <constraint firstItem="HtW-yA-OZw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fc9-IS-XYC"/>
+                <constraint firstItem="HtW-yA-OZw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xI4-pg-ra7"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="title" destination="xRk-qy-BYd" id="BS8-KP-GC0"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="154"/>
+        </view>
+    </objects>
+</document>

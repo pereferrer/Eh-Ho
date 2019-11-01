@@ -13,14 +13,14 @@ class PostsByTopicRouter {
     
     weak var viewController: UIViewController?
     
-    static func configureModule(id: Int) -> UIViewController {
+    static func configureModule(id: Int, topicTitle:String) -> UIViewController {
         
         let router = PostsByTopicRouter()
         let sessionApi = SessionAPI()
         let topicsRepository = TopicsRepositoryImpl(session: sessionApi)
         let dataManager = DataManager()
         let viewModel = PostsByTopicViewModel(id: id, router: router, topicsRepository: topicsRepository, dataManager: dataManager)
-        let viewController = PostsByTopicViewController(viewModel: viewModel)
+        let viewController = PostsByTopicViewController(viewModel: viewModel, topicTitle: topicTitle)
         
         viewModel.view = viewController
         router.viewController = viewController

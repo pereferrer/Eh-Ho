@@ -48,7 +48,8 @@ class TabBarController: UITabBarController {
         sendMessageController.tabBarItem = UITabBarItem(title: "Send message", image: UIImage(named: "baseline_message_black_18dp"), selectedImage: nil)
         sendMessageController.title = "Send message"
 
-        
+        self.tabBar.tintColor = UIColor(rgb: 0xF39000)
+        self.tabBar.unselectedItemTintColor = .black
         self.tabBar.barTintColor = .white
         let controllers = [categoriesController, createTopicController, sendMessageController]
         self.viewControllers = controllers.map { UINavigationController(rootViewController: $0) }

@@ -30,8 +30,8 @@ class TopicsByCategoryViewModel {
         fetchTopicsByCategory()
     }
     
-    func didTapInTopic(id: Int) {
-        router.navigateToTopic(id: id)
+    func didTapInTopic(id: Int, topicTitle:String) {
+        router.navigateToTopic(id: id, topicTitle: topicTitle)
     }
     
     private func fetchTopicsByCategory() {

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SFProDisplay-Bold.ttf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="b4t-Eu-VcD" customClass="TopicsByCategoryHeader" customModule="Eh_Ho" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cbt-Q5-s5s">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPe-Ma-qPk" customClass="CustomView" customModule="Eh_Ho" customModuleProvider="target">
+                            <rect key="frame" x="16" y="25" width="343" height="103"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chincheta" translatesAutoresizingMaskIntoConstraints="NO" id="3UG-Ts-ViF">
+                                    <rect key="frame" x="313" y="8" width="22" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="22" id="1Cv-Wy-qe1"/>
+                                        <constraint firstAttribute="height" constant="34" id="dov-bm-T1t"/>
+                                    </constraints>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="XgA-ue-y8Z">
+                                    <rect key="frame" x="8" y="18" width="297" height="77"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido e eh.ho" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYM-9r-5IZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="297" height="33.5"/>
+                                            <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="28"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Discourse Setup The first paragraph of this pinned topic…" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UxX-Lm-YYW">
+                                            <rect key="frame" x="0.0" y="34.5" width="297" height="42.5"/>
+                                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.95294117647058818" green="0.56470588235294117" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="XgA-ue-y8Z" secondAttribute="bottom" constant="8" id="4Oz-nI-Ry9"/>
+                                <constraint firstItem="XgA-ue-y8Z" firstAttribute="leading" secondItem="KPe-Ma-qPk" secondAttribute="leading" constant="8" id="D2h-7W-90P"/>
+                                <constraint firstItem="XgA-ue-y8Z" firstAttribute="top" secondItem="KPe-Ma-qPk" secondAttribute="top" constant="18" id="SF9-pC-WCZ"/>
+                                <constraint firstItem="3UG-Ts-ViF" firstAttribute="leading" secondItem="XgA-ue-y8Z" secondAttribute="trailing" constant="8" id="XMW-aD-Ntf"/>
+                                <constraint firstAttribute="trailing" secondItem="3UG-Ts-ViF" secondAttribute="trailing" constant="8" id="cI5-d8-DI4"/>
+                                <constraint firstItem="3UG-Ts-ViF" firstAttribute="top" secondItem="KPe-Ma-qPk" secondAttribute="top" constant="8" id="vR4-wb-BoP"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.047058823529411764" green="0.047058823529411764" blue="0.047058823529411764" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="KPe-Ma-qPk" secondAttribute="trailing" constant="16" id="Ldz-bp-g0q"/>
+                        <constraint firstAttribute="bottom" secondItem="KPe-Ma-qPk" secondAttribute="bottom" constant="23" id="Uvk-qW-k5V"/>
+                        <constraint firstItem="KPe-Ma-qPk" firstAttribute="leading" secondItem="cbt-Q5-s5s" secondAttribute="leading" constant="16" id="mqx-94-GUS"/>
+                        <constraint firstItem="KPe-Ma-qPk" firstAttribute="top" secondItem="cbt-Q5-s5s" secondAttribute="top" constant="25" id="yoZ-GL-ku5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="cbt-Q5-s5s" firstAttribute="top" secondItem="b4t-Eu-VcD" secondAttribute="top" id="7Jl-P8-vmg"/>
+                <constraint firstItem="cbt-Q5-s5s" firstAttribute="leading" secondItem="Ytx-u5-ZxQ" secondAttribute="leading" id="A4I-r4-TrJ"/>
+                <constraint firstItem="Ytx-u5-ZxQ" firstAttribute="bottom" secondItem="cbt-Q5-s5s" secondAttribute="bottom" id="HQK-pw-TwJ"/>
+                <constraint firstItem="Ytx-u5-ZxQ" firstAttribute="trailing" secondItem="cbt-Q5-s5s" secondAttribute="trailing" id="qhx-Mo-lgr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Ytx-u5-ZxQ"/>
+            <connections>
+                <outlet property="title" destination="hYM-9r-5IZ" id="hte-Mz-HR8"/>
+            </connections>
+            <point key="canvasLocation" x="-13.768115942028986" y="-48.549107142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chincheta" width="30" height="35"/>
+    </resources>
+</document>
